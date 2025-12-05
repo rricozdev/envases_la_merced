@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import Header from "./header";
+import Footer from "./Footer";
 
 export default function Layout() {
-  // Inicializa desde localStorage o preferencia del sistema
-  /**
-   * TODO: HACER ALGO SIMILIAR PERO EN EL HEADER PARA CAMBIAR DE MODOS DESDE ALLA
-   * const [isDark, setIsDark] = useState(false);
-  // const toggleTheme = () => setIsDark((prev) => !prev);
-  // document.documentElement.classList.toggle("dark", isDark)
-   */
-  // ;
-
   return (
     <>
-      {/* Header aquí */}
-      <main className="min-h-screen ">
+      <Header />
+      <main className="min-h-screen bg-bgligth-main text-txtligth-primary dark:bg-bgdark-main dark:text-txtdark-primary">
         <Outlet />
       </main>
-      {/* Footer aquí */}
+      <Footer />
     </>
   );
 }
