@@ -6,6 +6,8 @@ import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../../utils/navLinks.js";
+import Button from "../UI/Button.jsx";
+import SellRoundedIcon from "@mui/icons-material/SellRounded";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -28,7 +30,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 text-primary shrink-0">{/* SVG */}</div>
-              <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold">
+              <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold  ">
                 Envases La Merced
               </h1>
             </Link>
@@ -75,30 +77,45 @@ export default function Header() {
           </nav>
 
           {/* contenedor de botones */}
-          <div className="flex items-center gap-4">
-            <button
+          <div className="flex items-center gap-1">
+            <Button
+              type="secondary"
+              variant="ghost"
+              size="sm"
               onClick={toggleTheme}
-              className="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 text-white text-base font-bold transition-all"
-            >
-              {isDark ? (
-                <WbSunnyRoundedIcon className="text-txtdark-primary hover:text-brand-accent-hover" />
-              ) : (
-                <DarkModeRoundedIcon className="text-txtligth-primary hover:text-brand-accent-hover" />
-              )}
-            </button>
+              icon={isDark ? <WbSunnyRoundedIcon /> : <DarkModeRoundedIcon />}
+              iconOnly
+              className={
+                isDark
+                  ? "text-txtdark-primary hover:text-brand-accent-hover"
+                  : "text-txtligth-primary hover:text-brand-accent-hover"
+              }
+            />
+            <Button
+              type="secondary"
+              variant="ghost"
+              size="sm"
+              icon={<SellRoundedIcon />}
+              className={
+                isDark
+                  ? "text-txtdark-primary hover:text-brand-accent-hover"
+                  : "text-txtligth-primary hover:text-brand-accent-hover"
+              }
+              iconOnly
+              aria-label="Carrito de cotización"
+            />
 
             {/* Botón menú móvil/tablet */}
-            <button
-              className="lg:hidden cursor-pointer text-txtligth-primary dark:text-txtdark-primary"
+            <Button
+              type="secondary"
+              variant="ghost"
+              size="sm"
+              icon={mobileMenuOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
+              iconOnly
+              className="lg:hidden cursor-pointer text-txtligth-primary dark:text-txtdark-primary w-10"
               aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               onClick={toggleMobileMenu}
-            >
-              {mobileMenuOpen ? (
-                <CloseRoundedIcon className="text-3xl" />
-              ) : (
-                <MenuRoundedIcon className="text-3xl" />
-              )}
-            </button>
+            />
           </div>
         </div>
 
