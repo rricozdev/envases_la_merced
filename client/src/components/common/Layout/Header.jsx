@@ -1,22 +1,36 @@
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../../Providers/ThemeProvider.jsx";
 import { navLinks } from "../../../utils/navLinks.js";
 import Button from "../UI/Button.jsx";
-import SellRoundedIcon from "@mui/icons-material/SellRounded";
 
 export default function Header() {
   const { isDark, toggleTheme } = useTheme();
+  const location = useLocation();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
+  };
+
+  // Función para verificar si la ruta actual coincide con el enlace
+  const isActive = (path) => {
+    if (!path) return false; // Manejo de caso cuando path es undefined o null
+    return location.pathname === path;
+  };
+
+  // Función para verificar si la ruta actual coincide con alguna subruta de sucursales
+  const isSubActive = (subPath) => {
+    return location.pathname.startsWith(`/sucursales/${subPath}`);
   };
 
   return (
@@ -43,7 +57,14 @@ export default function Header() {
                 <li key={index} className="relative group">
                   {link.submenu ? (
                     <>
-                      <button className="flex items-center gap-1 text-txtligth-primary dark:text-txtdark-primary text-base font-medium hover:text-accent transition-colors">
+                      <button
+                        className={
+                          `flex items-center gap-1 text-base font-medium transition-colors ` +
+                          (location.pathname.startsWith("/sucursales")
+                            ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                            : "text-txtligth-primary dark:text-txtdark-primary hover:text-brand-accent-hover")
+                        }
+                      >
                         <span>{link.name}</span>
                         <ExpandMoreRoundedIcon className="text-xl" />
                       </button>
@@ -51,8 +72,13 @@ export default function Header() {
                         {link.submenu.map((item, idx) => (
                           <li key={idx}>
                             <Link
-                              className="block px-4 py-3 text-sm text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary"
-                              to={`sucursales/${item.path}`} // <- corregido typo "paht" a "path"
+                              to={`sucursales/${item.path}`}
+                              className={
+                                `block px-4 py-3 text-sm rounded transition-colors ` +
+                                (isSubActive(item.path)
+                                  ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                                  : "text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary")
+                              }
                             >
                               {item.name}
                             </Link>
@@ -63,7 +89,12 @@ export default function Header() {
                   ) : (
                     <Link
                       to={link.href}
-                      className="text-txtligth-primary dark:text-txtdark-primary text-base font-medium hover:text-brand-accent-hover transition-colors"
+                      className={
+                        `text-base font-medium transition-colors ` +
+                        (isActive(link.href)
+                          ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                          : "text-txtligth-primary dark:text-txtdark-primary hover:text-brand-accent-hover")
+                      }
                     >
                       {link.name}
                     </Link>
@@ -88,7 +119,7 @@ export default function Header() {
               type="secondary"
               variant="ghost"
               size="sm"
-              icon={<SellRoundedIcon />}
+              icon={<ShoppingCartRoundedIcon />}
               className={
                 isDark
                   ? "text-txtdark-primary hover:text-brand-accent-hover"
@@ -120,7 +151,14 @@ export default function Header() {
                 <li key={index} className="relative">
                   {link.submenu ? (
                     <details>
-                      <summary className="flex justify-between items-center cursor-pointer text-txtligth-primary dark:text-txtdark-primary px-2 py-2 rounded hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary">
+                      <summary
+                        className={
+                          `flex justify-between items-center cursor-pointer px-2 py-2 rounded transition-colors ` +
+                          (location.pathname.startsWith("/sucursales")
+                            ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                            : "text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary")
+                        }
+                      >
                         {link.name} <ExpandMoreRoundedIcon />
                       </summary>
                       <ul className="mt-2 ml-4 flex flex-col gap-2">
@@ -128,7 +166,12 @@ export default function Header() {
                           <li key={idx}>
                             <Link
                               to={`sucursales/${item.path}`}
-                              className="block px-2 py-1 rounded text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary"
+                              className={
+                                `block px-2 py-1 rounded transition-colors ` +
+                                (isSubActive(item.path)
+                                  ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                                  : "text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary")
+                              }
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               {item.name}
@@ -140,7 +183,12 @@ export default function Header() {
                   ) : (
                     <Link
                       to={link.href}
-                      className="block px-2 py-2 rounded text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary"
+                      className={
+                        `block px-2 py-2 rounded transition-colors ` +
+                        (isActive(link.href)
+                          ? "text-brand-accent-hover dark:text-brand-accent-hover"
+                          : "text-txtligth-primary dark:text-txtdark-primary hover:bg-bgligth-secondary dark:hover:bg-bgdark-secondary")
+                      }
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}
