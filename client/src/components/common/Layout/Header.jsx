@@ -5,18 +5,15 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../Providers/ThemeProvider.jsx";
 import { navLinks } from "../../../utils/navLinks.js";
 import Button from "../UI/Button.jsx";
 import SellRoundedIcon from "@mui/icons-material/SellRounded";
 
 export default function Header() {
-  const [isDark, setIsDark] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
-  const toggleTheme = () => {
-    setIsDark((prev) => !prev);
-    document.documentElement.classList.toggle("dark", !isDark);
-  };
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -85,11 +82,7 @@ export default function Header() {
               onClick={toggleTheme}
               icon={isDark ? <WbSunnyRoundedIcon /> : <DarkModeRoundedIcon />}
               iconOnly
-              className={
-                isDark
-                  ? "text-txtdark-primary hover:text-brand-accent-hover"
-                  : "text-txtligth-primary hover:text-brand-accent-hover"
-              }
+              className="text-txtligth-primary dark:text-txtdark-primary hover:text-brand-accent-hover"
             />
             <Button
               type="secondary"
