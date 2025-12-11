@@ -2,7 +2,7 @@ import Hero from "../common/UI/Hero";
 import ImageTextSection from "../common/UI/ImageTextSection";
 import SectionHeader from "../common/UI/SectionHeader";
 import CTASection from "../common/UI/CTASection";
-import TimelineItem from "../common/UI/TimeLineItem";
+import TimelineItem from "../common/UI/TimelineItem";
 import ValueCard from "../common/UI/ValueCard";
 import ContentBox from "../common/UI/ContentBox";
 
