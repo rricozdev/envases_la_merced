@@ -50,11 +50,11 @@ npm run dev
 Rutas y carpetas principales dentro del cliente:
 
 - `src/` — Código fuente del cliente.
-	- `src/main.jsx` — Entrada principal.
-	- `src/App.jsx` — Componente raíz.
-	- `src/components/` — Componentes UI y páginas.
-		- `src/components/Page/Products.jsx` — Página del catálogo.
-		- `src/components/common/` — Componentes reutilizables (UI, filtros, paginación).
+  - `src/main.jsx` — Entrada principal.
+  - `src/App.jsx` — Componente raíz.
+  - `src/components/` — Componentes UI y páginas.
+    - `src/components/Page/Products.jsx` — Página del catálogo.
+    - `src/components/common/` — Componentes reutilizables (UI, filtros, paginación).
 
 ## Desarrollo y buenas prácticas
 
