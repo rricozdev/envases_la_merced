@@ -1,4 +1,5 @@
 export default function TimelineItem({ icon, year, title, isLast = false }) {
+  // TODO: Corrigir los colores de los titulos y el espaciado si hay mas iconos
   return (
     <div
       className={`flex items-start gap-4 sm:gap-6 py-6 ${

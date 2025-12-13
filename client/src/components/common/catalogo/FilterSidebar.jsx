@@ -2,6 +2,7 @@ import CategoryFilter from "./UI/CategoryFilter";
 import IndustryFilter from "./UI/IndustryFilter";
 import MaterialFilter from "./UI/MaterialFilter";
 import VolumenFilter from "./UI/VolumenFilter";
+import Button from "../UI/Button";
 
 // Componente de Sidebar con todos los filtros
 export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
@@ -16,13 +17,16 @@ export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
           <h2 className="text-2xl font-bold text-primary dark:text-white">
             Filtros
           </h2>
-          <button
+          <Button
+            type="secondary"
+            size="sm"
+            variant="outline"
             onClick={onClearAll}
-            className="text-sm font-medium text-brand-accent hover:text-brand-accent/80 transition-colors cursor-pointer"
+            className="dark:text-txtdark-primary"
             aria-label="Limpiar todos los filtros"
           >
             Limpiar todo
-          </button>
+          </Button>
         </header>
 
         <div className="space-y-6">

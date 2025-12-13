@@ -17,13 +17,15 @@ export default function Button({
       solid: "bg-brand-accent hover:bg-brand-accent-hover text-white",
       outline:
         "border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white",
-      ghost: "text-brand-accent hover:bg-brand-accent/10",
+      ghost:
+        "text-brand-accent hover:bg-brand-accent/10 dark:hover:bg-white-300/10 dark:hover:text-white/90",
     },
     secondary: {
       solid: "bg-brand-primary hover:opacity-90 text-white",
       outline:
-        "border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white",
-      ghost: "text-brand-primary hover:bg-brand-primary/10",
+        "border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white dark:text-white dark:border-white/80 dark:hover:border-brand-primary",
+      ghost:
+        "text-brand-primary hover:bg-brand-primary/10 dark:text-white dark:hover:bg-white/10 dark:hover:text-white/90",
     },
   };
 
