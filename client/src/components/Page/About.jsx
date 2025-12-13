@@ -11,6 +11,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
+// TODO: Pasar esto a una constante - cambiar por información suminstrada
 const milestones = [
   { year: "1985", title: "Fundación de la Empresa", icon: "factory" },
   {
@@ -30,6 +31,7 @@ const milestones = [
   },
 ];
 
+// TODO: Pasar esto a una constante - cambiar por información suminstrada
 const values = [
   {
     icon: WorkspacePremiumIcon,
