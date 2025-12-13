@@ -16,7 +16,7 @@ export default function IndustryFilter({ industry, onChange }) {
       <select
         value={industry}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-md outline-0 border dark:bg-bgdark-secondary border-gray-300 dark:border-dark-border shadow-sm  focus:ring-brand-accent py-3 px-2"
+        className="w-full rounded-md outline-0 border dark:bg-bgdark-secondary border-gray-300 dark:border-dark-border shadow-sm  focus:ring-brand-accent py-3 px-2 cursor-pointer"
         aria-label="Selector de industria"
       >
         {valuesOptions.map((option) => (
