@@ -3,19 +3,28 @@ import { UIContext } from "../../../Providers/UIProvider";
 import { OVERLAYS } from "../../../utils/constants/overlays";
 import CartHeader from "./CartHeader";
 import CartList from "./CartList";
+import CartFooter from "./CartFooter";
 
 export default function CartDrawer() {
   const { isOpen, close } = useContext(UIContext);
   const open = isOpen(OVERLAYS.CART);
 
   return (
-    <div
-      className={`fixed top-0 right-0 h-screen  bg-bgligth-main shadow-2xl dark:bg-bgdark-tertiary transition-transform duration-300 ease-in-out z-50 ${
-        open ? "translate-x-0" : "translate-x-full"
-      }`}
+    <aside
+      className={`
+        fixed top-0 right-0 z-50
+        h-screen  sm:w-96
+        bg-bgligth-main dark:bg-bgdark-tertiary
+        shadow-2xl
+        flex flex-col
+        transition-transform duration-300 ease-in-out
+        ${open ? "translate-x-0" : "translate-x-full"}
+      `}
+      aria-hidden={!open}
     >
       <CartHeader />
       <CartList />
-    </div>
+      <CartFooter />
+    </aside>
   );
 }
