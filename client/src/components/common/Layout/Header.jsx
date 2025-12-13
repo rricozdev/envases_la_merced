@@ -1,20 +1,23 @@
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../../Providers/ThemeProvider.jsx";
+import { UIContext } from "../../../Providers/UIProvider.jsx";
+import { OVERLAYS } from "../../../utils/constants/overlays.js";
 import { navLinks } from "../../../utils/navLinks.js";
 import Button from "../UI/Button.jsx";
 
 export default function Header() {
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
+  const { open, toggle } = useContext(UIContext);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -116,6 +119,7 @@ export default function Header() {
               className="text-txtligth-primary dark:text-txtdark-primary hover:text-brand-accent-hover"
             />
             <Button
+              onClick={() => toggle(OVERLAYS.CART)}
               type="secondary"
               variant="ghost"
               size="sm"

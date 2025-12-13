@@ -1,3 +1,9 @@
+import AccessTimeFilledRoundedIcon from "@mui/icons-material/AccessTimeFilledRounded";
+import CallRoundedIcon from "@mui/icons-material/CallRounded";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 import { useParams } from "react-router-dom";
 import { sucursalesData } from "../../utils/sucursales";
 
@@ -5,12 +11,13 @@ const SucursalPage = () => {
   const { slug } = useParams();
   const sucursal = sucursalesData.find((s) => s.path === slug);
 
-  if (!sucursal)
+  if (!sucursal) {
     return (
       <div className="p-10 text-center text-gray-500 dark:text-txtdark-secondary">
         Sucursal no encontrada
       </div>
     );
+  }
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen text-txtligth-primary dark:text-txtdark-primary">
@@ -20,7 +27,7 @@ const SucursalPage = () => {
           Inicio / Sucursales / {sucursal.name}
         </div>
 
-        {/* Título y subtítulo */}
+        {/* Título */}
         <h1 className="text-4xl md:text-5xl font-black text-corporate-blue dark:text-txtdark-brand-primary mb-3">
           Sucursal {sucursal.name}
         </h1>
@@ -29,11 +36,11 @@ const SucursalPage = () => {
           nosotros.
         </p>
 
-        {/* Grid Layout */}
+        {/* Grid */}
         <div className="grid md:grid-cols-5 gap-6 mb-10">
           {/* Mapa */}
           <div className="md:col-span-3">
-            <div className="w-full h-[400px] md:h-[500px] rounded-xl shadow-md dark:shadow-none overflow-hidden">
+            <div className="w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-md dark:shadow-none">
               <iframe
                 src={sucursal.mapUrl}
                 className="w-full h-full border-0"
@@ -43,13 +50,11 @@ const SucursalPage = () => {
             </div>
           </div>
 
-          {/* Información */}
+          {/* Info */}
           <div className="md:col-span-2 bg-white dark:bg-bgdark-secondary p-6 rounded-xl shadow-md dark:shadow-none border border-gray-200 dark:border-transparent space-y-6">
             {/* Dirección */}
             <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-cta-green mt-1">
-                location_on
-              </span>
+              <LocationOnRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Dirección
@@ -62,28 +67,22 @@ const SucursalPage = () => {
 
             {/* Horario */}
             <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-cta-green mt-1">
-                schedule
-              </span>
+              <AccessTimeFilledRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Horario de Atención
                 </h3>
                 <p className="text-gray-600 dark:text-txtdark-secondary">
-                  Lunes a Jueves: 8:00 AM - 5:00 PM
-                  <br />
-                  Viernes: 8:00 AM - 3:30 PM
-                  <br />
+                  Lunes a Jueves: 8:00 AM - 5:00 PM <br />
+                  Viernes: 8:00 AM - 3:30 PM <br />
                   Sábado y Domingo: Cerrado
                 </p>
               </div>
             </div>
 
-            {/* Contacto */}
+            {/* Teléfono */}
             <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-cta-green mt-1">
-                call
-              </span>
+              <CallRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Contacto
@@ -96,16 +95,7 @@ const SucursalPage = () => {
 
             {/* WhatsApp */}
             <div className="flex items-start gap-3">
-              <div className="mt-1 flex-shrink-0">
-                <svg
-                  className="w-6 h-6 text-cta-green"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12.04 2C6.49 2 2 6.49 2 12.04c0 2.11.55 4.08 1.5 5.78L2 22l4.37-1.38c1.7.95 3.67 1.5 5.77 1.5 5.55 0 10.04-4.49 10.04-10.04S17.59 2 12.04 2zm5.34 14.2c-.23.65-1.32 1.25-1.82 1.33-.47.08-1.04.12-2.37-.48-3.06-1.36-5-4.02-5.16-4.18-.16-.16-1.28-1.54-1.28-2.93s.69-2.07.94-2.35c.24-.27.53-.33.71-.33.18 0 .37 0 .53 0 .17 0 .4-.06.61.45.22.51.74 1.77.8 1.9.07.12.11.27.02.44-.08.18-.12.3-.25.46-.12.16-.26.36-.37.48-.12.12-.24.27-.1.53.14.25.62 1.02 1.33 1.65.92.86 1.7 1.14 2.07 1.27.3.1.48.08.66-.05.18-.13.74-.86.93-1.15.18-.29.36-.24.61-.14.24.1 1.5.7 1.76.83.27.13.44.2.5.31.07.1.07.58-.16 1.23z" />
-                </svg>
-              </div>
+              <WhatsAppIcon className="text-cta-green mt-0.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   WhatsApp
@@ -123,14 +113,7 @@ const SucursalPage = () => {
 
             {/* Facebook */}
             <div className="flex items-start gap-3">
-              <svg
-                className="w-6 h-6 text-cta-green mt-1 flex-shrink-0"
-                viewBox="0 0 320 512"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M279.14 288l14.22-92.66h-88.91V127.08c0-25.35 12.42-50.06 52.24-50.06H293V6.26S265.89 0 242.4 0C183.32 0 136.36 46.95 136.36 132.07V195.3H48v92.66h88.36V512h107.78V288z" />
-              </svg>
+              <FacebookRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Facebook
@@ -148,23 +131,25 @@ const SucursalPage = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* CTA */}
         <div className="bg-white dark:bg-bgdark-tertiary p-6 rounded-xl shadow-md dark:shadow-none border border-gray-200 dark:border-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-lg text-corporate-blue dark:text-txtdark-brand-primary flex-1 text-left">
+          <p className="text-lg text-corporate-blue dark:text-txtdark-brand-primary flex-1">
             ¿Listo para comenzar tu proyecto?
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
               href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 bg-[var(--color-brand-accent)] hover:bg-[var(--color-brand-accent-hover)] text-white rounded-xl font-bold transition-colors text-center "
+              className="w-full sm:w-auto px-6 py-3 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-xl font-bold transition-colors text-center"
             >
               Llamar ahora
             </a>
+
             <a
               href="#cotizacion"
-              className="w-full sm:w-auto px-6 py-3 bg-[#2C4864] hover:bg-[#243b52]     text-white rounded-xl font-bold transition-colors text-center "
+              className="w-full sm:w-auto px-6 py-3 bg-[#2C4864] hover:bg-[#243b52] text-white rounded-xl font-bold transition-colors text-center"
             >
               Solicitar cotización desde esta sucursal
             </a>

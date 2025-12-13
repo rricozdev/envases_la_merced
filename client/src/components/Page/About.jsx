@@ -11,6 +11,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
+// TODO: Pasar esto a una constante - cambiar por información suminstrada
 const milestones = [
   { year: "1985", title: "Fundación de la Empresa", icon: "factory" },
   {
@@ -30,6 +31,7 @@ const milestones = [
   },
 ];
 
+// TODO: Pasar esto a una constante - cambiar por información suminstrada
 const values = [
   {
     icon: WorkspacePremiumIcon,
@@ -113,7 +115,7 @@ export default function About() {
           {/* Visión */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div
-              className="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg order-last md:order-first"
+              className="w-full bg-center bg-no-repeat aspect-4/3 bg-cover rounded-lg order-last md:order-first"
               style={{
                 backgroundImage:
                   "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpnIk5eWN31bp5VugbmkGC_dqv4jWjGSLsujLBfBYuHAYHY8UZQVoDWN8-H6cHr2hIOzbhyOjO7D2mj5ZHVjUU1GeoZ7EQXk2S8vnHsoHgN87SneTXOlntw9FOHizd727QCkOfXaFgvwK9YCKrfYRS8ycr-dSdftoJ4hiBg38TcFOmv0iRGyc6_Sj2oPsjPJkxCfzAAUR-Y0VFJJv1c4Kmp6JjixUDD3MQgki3h5X1tIwrGzEeqe36u3nC_U42u3Rcq-o5tMSaBps')",

@@ -10,8 +10,6 @@ const Home = lazy(() => import("../components/Page/Home"));
 const About = lazy(() => import("../components/Page/About"));
 const Contact = lazy(() => import("../components/Page/Contact"));
 const Products = lazy(() => import("../components/Page/Products"));
-const Cart = lazy(() => import("../components/Page/Cart"));
-const Branches = lazy(() => import("../components/Page/Branches"));
 const NotFound = lazy(() => import("../components/Page/NotFound"));
 
 const router = createBrowserRouter([
@@ -27,7 +25,6 @@ const router = createBrowserRouter([
       { path: "sobre-nosotros", element: <About /> },
       { path: "contacto", element: <Contact /> },
       { path: "catalogo", element: <Products /> },
-      { path: "carrito", element: <Cart /> },
       {
         path: "/sucursales/:slug",
         element: <SucursalPage />,
