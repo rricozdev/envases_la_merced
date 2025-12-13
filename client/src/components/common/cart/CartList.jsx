@@ -7,7 +7,7 @@ export default function CartList() {
 
   if (cart.length === 0) {
     return (
-      <div className="p-4 text-sm text-gray-500">
+      <div className="flex-1 p-4 text-sm text-gray-500">
         No hay productos en la cotización
       </div>
     );
