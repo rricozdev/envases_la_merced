@@ -4,6 +4,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/common/Layout/Layout.jsx";
 import Loader from "../components/common/Shared/Loader.jsx";
 
+import SucursalPage from "../components/Page/SucursalPage.jsx";
+
 const Home = lazy(() => import("../components/Page/Home"));
 const About = lazy(() => import("../components/Page/About"));
 const Contact = lazy(() => import("../components/Page/Contact"));
@@ -26,7 +28,10 @@ const router = createBrowserRouter([
       { path: "contacto", element: <Contact /> },
       { path: "catalogo", element: <Products /> },
       { path: "carrito", element: <Cart /> },
-      { path: "sucursales/:name", element: <Branches /> },
+      {
+        path: "/sucursales/:slug",
+        element: <SucursalPage />,
+      },
       { path: "*", element: <NotFound /> },
     ],
   },
