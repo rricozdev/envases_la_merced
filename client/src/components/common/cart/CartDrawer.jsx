@@ -6,7 +6,7 @@ import CartList from "./CartList";
 import CartFooter from "./CartFooter";
 
 export default function CartDrawer() {
-  const { isOpen, close } = useContext(UIContext);
+  const { isOpen } = useContext(UIContext);
   const open = isOpen(OVERLAYS.CART);
 
   return (
