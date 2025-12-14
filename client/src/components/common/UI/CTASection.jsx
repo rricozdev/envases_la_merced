@@ -5,7 +5,7 @@ export default function CTASection({
   description,
   buttonText = "Solicitar Cotización",
   onButtonClick,
-  variant = "primary", // "primary", "accent"
+  variant = "primary", 
   className = "",
 }) {
   const variants = {

@@ -13,13 +13,14 @@ import { UIContext } from "../../../Providers/UIProvider.jsx";
 import { OVERLAYS } from "../../../utils/constants/overlays.js";
 import { navLinks } from "../../../utils/navLinks.js";
 import Button from "../UI/Button.jsx";
+import { CartContext } from "../../../Providers/CartProvider.jsx";
 
 export default function Header() {
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
-  const { open, toggle } = useContext(UIContext);
-
+  const { toggle } = useContext(UIContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cart } = useContext(CartContext);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -118,20 +119,32 @@ export default function Header() {
               iconOnly
               className="text-txtligth-primary dark:text-txtdark-primary hover:text-brand-accent-hover"
             />
-            <Button
-              onClick={() => toggle(OVERLAYS.CART)}
-              type="secondary"
-              variant="ghost"
-              size="sm"
-              icon={<ShoppingCartRoundedIcon />}
-              className={
-                isDark
-                  ? "text-txtdark-primary hover:text-brand-accent-hover"
-                  : "text-txtligth-primary hover:text-brand-accent-hover"
-              }
-              iconOnly
-              aria-label="Carrito de cotización"
-            />
+            <div className="relative">
+              <Button
+                onClick={() => toggle(OVERLAYS.CART)}
+                type="secondary"
+                variant="ghost"
+                size="sm"
+                icon={<ShoppingCartRoundedIcon />}
+                className={
+                  isDark
+                    ? "text-txtdark-primary hover:text-brand-accent-hover"
+                    : "text-txtligth-primary hover:text-brand-accent-hover"
+                }
+                iconOnly
+                aria-label={`Carrito de cotización, ${cart.length} productos`}
+              />
+
+              {cart.length > 0 && (
+                <div
+                  aria-hidden="true"
+                  className=" pointer-events-none absolute -top-1 left-6 flex items-center justify-center h-5 min-w-5 px-1.5 rounded-full bg-red-500 text-[11px] font-bold leading-none text-white
+                  "
+                >
+                  {cart.length > 99 ? "99+" : cart.length}
+                </div>
+              )}
+            </div>
 
             {/* Botón menú móvil/tablet */}
             <Button

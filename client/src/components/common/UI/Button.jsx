@@ -11,6 +11,7 @@ export default function Button({
   disabled = false,
   icon,
   iconPosition = "left",
+  HtmlType = "button",
 }) {
   const colors = {
     primary: {
@@ -60,6 +61,7 @@ export default function Button({
 
   return (
     <button
+      type={HtmlType}
       onClick={onClick}
       disabled={disabled}
       className={`
