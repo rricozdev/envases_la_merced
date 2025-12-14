@@ -3,9 +3,11 @@ import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EventAvailableRoundedIcon from "@mui/icons-material/EventAvailableRounded";
 
 import { useParams } from "react-router-dom";
 import { sucursalesData } from "../../utils/sucursales";
+import Button from "../common/UI/Button";
 
 const SucursalPage = () => {
   const { slug } = useParams();
@@ -18,6 +20,8 @@ const SucursalPage = () => {
       </div>
     );
   }
+
+  const iconColorClass = "text-brand-accent mt-0.5 shrink-0";
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen text-txtligth-primary dark:text-txtdark-primary">
@@ -54,7 +58,7 @@ const SucursalPage = () => {
           <div className="md:col-span-2 bg-white dark:bg-bgdark-secondary p-6 rounded-xl shadow-md dark:shadow-none border border-gray-200 dark:border-transparent space-y-6">
             {/* Dirección */}
             <div className="flex items-start gap-3">
-              <LocationOnRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
+              <LocationOnRoundedIcon className={iconColorClass} />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Dirección
@@ -67,7 +71,7 @@ const SucursalPage = () => {
 
             {/* Horario */}
             <div className="flex items-start gap-3">
-              <AccessTimeFilledRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
+              <AccessTimeFilledRoundedIcon className={iconColorClass} />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Horario de Atención
@@ -82,7 +86,7 @@ const SucursalPage = () => {
 
             {/* Teléfono */}
             <div className="flex items-start gap-3">
-              <CallRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
+              <CallRoundedIcon className={iconColorClass} />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Contacto
@@ -95,7 +99,7 @@ const SucursalPage = () => {
 
             {/* WhatsApp */}
             <div className="flex items-start gap-3">
-              <WhatsAppIcon className="text-cta-green mt-0.5 shrink-0" />
+              <WhatsAppIcon className={iconColorClass} />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   WhatsApp
@@ -104,7 +108,7 @@ const SucursalPage = () => {
                   href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cta-green font-medium hover:underline"
+                  className={`${iconColorClass} font-medium hover:underline`}
                 >
                   {sucursal.whatsapp}
                 </a>
@@ -113,7 +117,7 @@ const SucursalPage = () => {
 
             {/* Facebook */}
             <div className="flex items-start gap-3">
-              <FacebookRoundedIcon className="text-cta-green mt-0.5 shrink-0" />
+              <FacebookRoundedIcon className={iconColorClass} />
               <div>
                 <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
                   Facebook
@@ -122,7 +126,7 @@ const SucursalPage = () => {
                   href={sucursal.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cta-green hover:underline"
+                  className={`${iconColorClass} hover:underline`}
                 >
                   {sucursal.facebook}
                 </a>
@@ -138,21 +142,48 @@ const SucursalPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
-              href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-xl font-bold transition-colors text-center"
+            {/* Agendar visita */}
+            <Button
+              type="primary"
+              variant="solid"
+              size="md"
+              fullWidth
+              icon={<EventAvailableRoundedIcon />}
+              iconPosition="left"
+              className="sm:w-auto"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/${sucursal.whatsapp.replace(
+                    /\D/g,
+                    ""
+                  )}?text=${encodeURIComponent(
+                    `Hola, quiero agendar una visita a la sucursal ${sucursal.name}.`
+                  )}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
-              Llamar ahora
-            </a>
+              Agendar visita
+            </Button>
 
-            <a
-              href="#cotizacion"
-              className="w-full sm:w-auto px-6 py-3 bg-[#2C4864] hover:bg-[#243b52] text-white rounded-xl font-bold transition-colors text-center"
+            {/* Solicitar cotización */}
+            <Button
+              type="secondary"
+              variant="solid"
+              size="md"
+              fullWidth
+              className="sm:w-auto"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               Solicitar cotización desde esta sucursal
-            </a>
+            </Button>
           </div>
         </div>
       </div>
