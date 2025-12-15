@@ -1,8 +1,8 @@
-import CategoryFilter from "./UI/CategoryFilter";
-import IndustryFilter from "./UI/IndustryFilter";
-import MaterialFilter from "./UI/MaterialFilter";
-import VolumenFilter from "./UI/VolumenFilter";
-import Button from "../UI/Button";
+import CategoryFilter from "./filters/CategoryFilter";
+import IndustryFilter from "./filters/IndustryFilter";
+import MaterialFilter from "./filters/MaterialFilter";
+import VolumenFilter from "./filters/VolumenFilter";
+import Button from "../../UI/Button";
 
 // Componente de Sidebar con todos los filtros
 export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {

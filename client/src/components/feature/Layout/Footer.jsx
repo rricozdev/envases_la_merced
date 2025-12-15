@@ -2,7 +2,7 @@ import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import MarkunreadRoundedIcon from "@mui/icons-material/MarkunreadRounded";
 import { Link } from "react-router-dom";
-import { navLinks, sucursales } from "../../../utils/navLinks.js";
+import { navLinks, sucursales } from "../../../utils/constants/navLinks";
 
 export default function Footer() {
   return (

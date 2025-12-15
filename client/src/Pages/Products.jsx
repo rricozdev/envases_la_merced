@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import SectionHeader from "../common/UI/SectionHeader";
-import FilterSidebar from "../common/catalogo/FilterSidebar";
-import ProductGrid from "../common/catalogo/UI/ProductGrid";
-import Pagination from "../common/UI/Pagination";
-import { CartContext } from "../../Providers/CartProvider";
+import FilterSidebar from "../components/feature/catalogo/FilterSidebar";
+import ProductGrid from "../components/feature/catalogo/ProductGrid";
+import Pagination from "../components/UI/Pagination";
+import SectionHeader from "../components/UI/SectionHeader";
+import { CartContext } from "../Providers/CartProvider";
 
 const products = [
   {

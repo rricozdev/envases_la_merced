@@ -1,4 +1,4 @@
-import Checkbox from "../../UI/Checkbox";
+import Checkbox from "../../../UI/form/Checkbox";
 
 export default function CategoryFilter({
   categories,

@@ -1,6 +1,6 @@
-import Info from "../common/home/Info";
-import Opinions from "../common/home/Opinions";
-import Hero from "../common/UI/Hero";
+import Info from "../components/feature/home/Info";
+import Opinions from "../components/feature/home/Opinions";
+import Hero from "../components/UI/Hero";
 
 const heroData = {
   title: "Fabricamos y distribuimos envases de alta calidad para tu negocio",

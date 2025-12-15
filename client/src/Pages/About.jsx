@@ -1,63 +1,12 @@
-import Hero from "../common/UI/Hero";
-import ImageTextSection from "../common/UI/ImageTextSection";
-import SectionHeader from "../common/UI/SectionHeader";
-import CTASection from "../common/UI/CTASection";
-import TimelineItem from "../common/UI/TimelineItem";
-import ValueCard from "../common/UI/ValueCard";
-import ContentBox from "../common/UI/ContentBox";
-
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import HandshakeIcon from "@mui/icons-material/Handshake";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-
-// TODO: Pasar esto a una constante - cambiar por información suminstrada
-const milestones = [
-  { year: "1985", title: "Fundación de la Empresa", icon: "factory" },
-  {
-    year: "1998",
-    title: "Primera Gran Expansión de Planta",
-    icon: "open_with",
-  },
-  {
-    year: "2005",
-    title: "Certificación de Calidad ISO 9001",
-    icon: "verified",
-  },
-  {
-    year: "2020",
-    title: "Lanzamiento de Línea Ecológica Sostenible",
-    icon: "forest",
-  },
-];
-
-// TODO: Pasar esto a una constante - cambiar por información suminstrada
-const values = [
-  {
-    icon: WorkspacePremiumIcon,
-    title: "Calidad",
-    description:
-      "Compromiso con los más altos estándares en cada producto que fabricamos.",
-  },
-  {
-    icon: LightbulbIcon,
-    title: "Innovación",
-    description:
-      "Búsqueda constante de nuevas tecnologías y procesos para mejorar nuestras soluciones.",
-  },
-  {
-    icon: HandshakeIcon,
-    title: "Compromiso",
-    description:
-      "Dedicación total a los plazos, la calidad y el éxito de nuestros clientes.",
-  },
-  {
-    icon: SupportAgentIcon,
-    title: "Servicio",
-    description:
-      "Atención personalizada y soporte excepcional para garantizar la satisfacción del cliente.",
-  },
-];
+import CTASection from "../components/UI/CTASection";
+import ContentBox from "../components/UI/ContentBox";
+import Hero from "../components/UI/Hero";
+import ImageTextSection from "../components/UI/ImageTextSection";
+import SectionHeader from "../components/UI/SectionHeader";
+import TimelineItem from "../components/feature/about/TimelineItem";
+import ValueCard from "../components/feature/about/ValueCard";
+import cardValues from "../utils/constants/about/cardValues";
+import milestones from "../utils/constants/about/milestones";
 
 export default function About() {
   return (
@@ -169,7 +118,7 @@ export default function About() {
           className="mb-12"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
+          {cardValues.map((value, index) => (
             <ValueCard
               key={index}
               icon={value.icon}

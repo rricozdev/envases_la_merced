@@ -1,7 +1,7 @@
 import useContactForm from "../../../hooks/useContactForm";
-import Button from "../UI/Button";
-import Input from "../UI/form/Input";
-import Textarea from "../UI/form/Textarea";
+import Button from "../../UI/Button";
+import Input from "../../UI/form/Input";
+import Textarea from "../../UI/form/Textarea";
 
 export default function ContactForm() {
   const { register, handleSubmit, errors, isSubmitting, onSubmit } =

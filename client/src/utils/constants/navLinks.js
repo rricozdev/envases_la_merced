@@ -6,7 +6,7 @@ export const sucursales = sucursalesData.map(({ name, path }) => ({
 }));
 
 export const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Inicio", href: "/" },
   { name: "Productos", href: "/catalogo" },
   { name: "Sucursales", submenu: sucursales },
   { name: "Nosotros", href: "/sobre-nosotros" },

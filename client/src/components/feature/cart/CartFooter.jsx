@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../../Providers/CartProvider";
-import Button from "../UI/Button";
+import Button from "../../UI/Button";
 
 export default function CartFooter() {
   const { cart, clearCart } = useContext(CartContext);

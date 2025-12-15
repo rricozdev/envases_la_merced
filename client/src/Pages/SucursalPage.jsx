@@ -6,8 +6,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EventAvailableRoundedIcon from "@mui/icons-material/EventAvailableRounded";
 
 import { useParams } from "react-router-dom";
-import { sucursalesData } from "../../utils/sucursales";
-import Button from "../common/UI/Button";
+import { sucursalesData } from "../utils/constants/sucursales";
+import Button from "../components/UI/Button";
 
 const SucursalPage = () => {
   const { slug } = useParams();

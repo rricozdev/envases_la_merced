@@ -1,7 +1,8 @@
-import ContactForm from "../common/contact/ContactForm";
-import ContactMethods from "../common/contact/ContactMethods";
-import { sucursalesData } from "../../utils/sucursales";
-import BranchList from "../common/contact/BranchList";
+import { sucursalesData } from "../utils/constants/sucursales";
+import BranchList from "../components/feature/contact/BranchList";
+import ContactForm from "../components/feature/contact/ContactForm";
+import ContactMethods from "../components/feature/contact/ContactMethods";
+
 export default function Contact() {
   const sucursal = sucursalesData.find((sucursal) => (sucursal.name = "CDMX"));
   return (

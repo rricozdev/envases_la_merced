@@ -1,19 +1,18 @@
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
-
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
-
 import { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
+import { CartContext } from "../../../Providers/CartProvider.jsx";
 import { useTheme } from "../../../Providers/ThemeProvider.jsx";
 import { UIContext } from "../../../Providers/UIProvider.jsx";
+import { navLinks } from "../../../utils/constants/navLinks.js";
 import { OVERLAYS } from "../../../utils/constants/overlays.js";
-import { navLinks } from "../../../utils/navLinks.js";
-import Button from "../UI/Button.jsx";
-import { CartContext } from "../../../Providers/CartProvider.jsx";
+import Button from "../../UI/Button.jsx";
 
 export default function Header() {
   const { isDark, toggleTheme } = useTheme();

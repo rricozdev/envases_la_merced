@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { OVERLAYS } from "../../../utils/constants/overlays";
-import { UIContext } from "../../../Providers/UIProvider";
-import Button from "../UI/Button";
 import CloseIcon from "@mui/icons-material/Close";
+import { useContext } from "react";
+import { UIContext } from "../../../Providers/UIProvider";
+import { OVERLAYS } from "../../../utils/constants/overlays";
+import Button from "../../UI/Button";
 
 export default function CartHeader() {
   const { close } = useContext(UIContext);

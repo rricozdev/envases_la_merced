@@ -1,7 +1,6 @@
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../Providers/CartProvider";
-import Button from "../UI/Button";
-import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 
 export default function CartItem({ item }) {
   const { updateQuantity, removeFromCart } = useContext(CartContext);

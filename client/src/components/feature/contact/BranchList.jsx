@@ -1,4 +1,4 @@
-import { sucursalesData } from "../../../utils/sucursales";
+import { sucursalesData } from "../../../utils/constants/sucursales";
 import BranchCard from "./BranchCard";
 
 export default function BranchList() {
