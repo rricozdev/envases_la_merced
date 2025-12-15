@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../common/UI/Button";
+import Button from "../components/UI/Button";
 
 export default function NotFound() {
   return (
