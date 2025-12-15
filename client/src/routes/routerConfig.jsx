@@ -1,16 +1,15 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import Layout from "../components/common/Layout/Layout.jsx";
-import Loader from "../components/common/Shared/Loader.jsx";
+import Layout from "../components/feature/Layout/Layout.jsx";
+import Loader from "../components/UI/Loader.jsx";
+import SucursalPage from "../Pages/SucursalPage.jsx";
 
-import SucursalPage from "../components/Page/SucursalPage.jsx";
-
-const Home = lazy(() => import("../components/Page/Home"));
-const About = lazy(() => import("../components/Page/About"));
-const Contact = lazy(() => import("../components/Page/Contact"));
-const Products = lazy(() => import("../components/Page/Products"));
-const NotFound = lazy(() => import("../components/Page/NotFound"));
+const Home = lazy(() => import("../Pages/Home"));
+const About = lazy(() => import("../Pages/About"));
+const Contact = lazy(() => import("../Pages/Contact"));
+const Products = lazy(() => import("../Pages/Products"));
+const NotFound = lazy(() => import("../Pages/NotFound"));
 
 const router = createBrowserRouter([
   {
