@@ -43,11 +43,11 @@ export default function CartItem({ item }) {
   return (
     <li className="group relative flex gap-4 p-4 transition-all duration-300">
       {/* Imagen con efecto hover */}
-      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 shadow-sm">
+      <div className="relative h-20 w-20 shrink-0 p-3 overflow-hidden rounded-xl bg-white dark:to-gray-900 shadow-sm">
         <img
           src={item.img.src}
           alt={item.img.alt}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
       </div>
@@ -55,10 +55,14 @@ export default function CartItem({ item }) {
       <div className="flex flex-1 flex-col gap-3">
         {/* Nombre + eliminar */}
         <div className="flex items-start justify-between gap-3">
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2 ">
-            {item.title}
-          </h3>
-
+          <div className="flex flex-col">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2 ">
+              {item.nombre} {item.volumen && `- ${item.volumen}ml`}
+            </h3>
+            <p>
+              {item.piezasPorPaquete && `${item.piezasPorPaquete} PZS/PAQ `}
+            </p>
+          </div>
           <button
             onClick={() => removeFromCart(item.id)}
             className=" cursor-pointer shrink-0 p-2 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all duration-200 -mt-1"

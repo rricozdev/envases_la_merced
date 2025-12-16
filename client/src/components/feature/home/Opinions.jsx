@@ -8,8 +8,44 @@ import Opinion from "./Opinion";
 const opions = [
   {
     author: {
+      name: "Martin Zavala.",
+      position: "",
+      avatar: "",
+    },
+    opinion:
+      '"El servicio, variedad y calidad que tienen es muy bueno, sin duda seguire comprándoles. ¡Recomendados! "',
+  },
+  {
+    author: {
       name: "María López",
-      position: "Gerente de Producto en EcoPack",
+      position: "",
+      avatar: "",
+    },
+    opinion:
+      '"Entregan rápido y tienen buenas paqueterías con precios accesibles. La calidad de los envases es excelente. Muy recomendados."',
+  },
+  {
+    author: {
+      name: "Elías Campillo.",
+      position: "",
+      avatar: "",
+    },
+    opinion:
+      '"Empece comprandoles menudeo y ahora que he crecido me dieron precios especiales y ya puedo revender. Excelente atención y calidad."',
+  },
+  {
+    author: {
+      name: "Daniela Ortega.",
+      position: "",
+      avatar: "",
+    },
+    opinion:
+      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
+  },
+  {
+    author: {
+      name: "Ricardo Martinez",
+      position: "",
       avatar: "",
     },
     opinion:
@@ -18,43 +54,7 @@ const opions = [
   {
     author: {
       name: "María López",
-      position: "Gerente de Producto en EcoPack",
-      avatar: "",
-    },
-    opinion:
-      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
-  },
-  {
-    author: {
-      name: "María López",
-      position: "Gerente de Producto en EcoPack",
-      avatar: "",
-    },
-    opinion:
-      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
-  },
-  {
-    author: {
-      name: "María López",
-      position: "Gerente de Producto en EcoPack",
-      avatar: "",
-    },
-    opinion:
-      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
-  },
-  {
-    author: {
-      name: "María López",
-      position: "Gerente de Producto en EcoPack",
-      avatar: "",
-    },
-    opinion:
-      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
-  },
-  {
-    author: {
-      name: "María López",
-      position: "Gerente de Producto en EcoPack",
+      position: "",
       avatar: "",
     },
     opinion:
@@ -64,7 +64,7 @@ const opions = [
 
 export default function Opinions() {
   return (
-    <section className="py-20 sm:py-28 ">
+    <section className="py-20  sm:py-28 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-16">
           <h2 className="text-3xl font-bold text-txtligth-primary dark:text-txtdark-primary sm:text-4xl">
