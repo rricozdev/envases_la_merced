@@ -1,44 +1,100 @@
+function getVisiblePages(currentPage, totalPages, maxVisible = 5) {
+  const half = Math.floor(maxVisible / 2);
+
+  let start = Math.max(currentPage - half, 1);
+  let end = start + maxVisible - 1;
+
+  if (end > totalPages) {
+    end = totalPages;
+    start = Math.max(end - maxVisible + 1, 1);
+  }
+
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
+
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
+  if (totalPages <= 1) return null;
+
+  const visiblePages = getVisiblePages(currentPage, totalPages);
+
   return (
     <nav
       className="mt-16 flex justify-center"
       aria-label="Paginación de productos"
     >
-      <ul className="inline-flex items-center -space-x-px rounded-md text-sm">
+      <ul className="inline-flex items-center rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden text-sm">
+        {/* ← Anterior */}
         <li>
           <button
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="cursor-pointer inline-flex items-center px-4 h-10 font-medium text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-bgdark-secondary dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white  disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Página anterior"
+            className="px-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
           >
-            Anterior
+            ‹
           </button>
         </li>
-        {[...Array(totalPages)].map((_, i) => (
-          <li key={i + 1}>
+
+        {/* Primera página + … */}
+        {visiblePages[0] > 1 && (
+          <>
+            <li className="hidden sm:block">
+              <button
+                onClick={() => onPageChange(1)}
+                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+              >
+                1
+              </button>
+            </li>
+            <li className="hidden sm:flex items-center px-3 text-gray-400">
+              …
+            </li>
+          </>
+        )}
+
+        {/* Páginas visibles */}
+        {visiblePages.map((page) => (
+          <li key={page}>
             <button
-              onClick={() => onPageChange(i + 1)}
-              aria-current={currentPage === i + 1 ? "page" : undefined}
-              className={`inline-flex items-center px-4 h-10 font-medium cursor-pointer ${
-                currentPage === i + 1
-                  ? "z-10 text-white bg-txtligth-primary border border-txtligth-primary/50 dark:bg-brand-primary dark:border-bgdark-tertiary/50"
-                  : "text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-bgdark-secondary dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              onClick={() => onPageChange(page)}
+              aria-current={currentPage === page ? "page" : undefined}
+              className={`px-3 sm:px-4 h-10 font-medium transition-colors ${
+                currentPage === page
+                  ? "bg-txtligth-primary text-white dark:bg-brand-primary"
+                  : "text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
               }`}
-              aria-label={`Página ${i + 1}`}
             >
-              {i + 1}
+              {page}
             </button>
           </li>
         ))}
+
+        {/* … + última página */}
+        {visiblePages.at(-1) < totalPages && (
+          <>
+            <li className="hidden sm:flex items-center px-3 text-gray-400">
+              …
+            </li>
+            <li className="hidden sm:block">
+              <button
+                onClick={() => onPageChange(totalPages)}
+                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+              >
+                {totalPages}
+              </button>
+            </li>
+          </>
+        )}
+
+        {/* Siguiente → */}
         <li>
           <button
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="cursor-pointer inline-flex items-center px-4 h-10 font-medium text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-bgdark-secondary dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Página siguiente"
+            className="px-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
           >
-            Siguiente
+            ›
           </button>
         </li>
       </ul>
