@@ -1,64 +1,65 @@
-import CategoryFilter from "./filters/CategoryFilter";
-import IndustryFilter from "./filters/IndustryFilter";
-import MaterialFilter from "./filters/MaterialFilter";
-import VolumenFilter from "./filters/VolumenFilter";
+import {
+  CategoriaProducto,
+  CodigoRosca,
+  ColorProducto,
+  EtiquetaProducto,
+} from "../../../utils/constants/products/listProducts";
 import Button from "../../UI/Button";
+import CategoryFilter from "./filters/CategoryFilter";
+import VolumeFilter from "./filters/VolumenFilter";
+import { motion } from "framer-motion";
 
-// Componente de Sidebar con todos los filtros
 export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
   return (
-    <aside
-      className="w-full lg:w-1/4"
-      role="complementary"
-      aria-label="Filtros de productos"
-    >
-      <div className="sticky top-28 space-y-8">
-        <header className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-primary dark:text-white">
-            Filtros
-          </h2>
-          <Button
-            type="secondary"
-            size="sm"
-            variant="outline"
-            onClick={onClearAll}
-            className="dark:text-txtdark-primary"
-            aria-label="Limpiar todos los filtros"
-          >
-            Limpiar todo
-          </Button>
-        </header>
+    <aside className="w-full lg:w-1/4">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className="sticky top-24 space-y-8"
+      >
+        <div className="sticky top-24 space-y-8">
+          <header className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold">Filtros</h2>
+            <Button size="sm" variant="outline" onClick={onClearAll}>
+              Limpiar
+            </Button>
+          </header>
 
-        <div className="space-y-6">
           <CategoryFilter
-            categories={[
-              "Envases de Plástico",
-              "Botellas de Vidrio",
-              "Latas de Metal",
-              "Tapas y Accesorios",
-              "Envases Flexibles",
-            ]}
-            selectedCategories={filters.categories}
-            onToggle={(cat) => onFilterChange("categories", cat)}
+            title="Categorías"
+            options={Object.values(CategoriaProducto)}
+            selected={filters.categorias}
+            onToggle={(v) => onFilterChange("categorias", v)}
           />
 
-          <MaterialFilter
-            materials={["PET", "HDPE", "Vidrio", "Aluminio"]}
-            selectedMaterials={filters.materials}
-            onToggle={(mat) => onFilterChange("materials", mat)}
+          <CategoryFilter
+            title="Colores"
+            options={Object.values(ColorProducto)}
+            selected={filters.colores}
+            onToggle={(v) => onFilterChange("colores", v)}
           />
 
-          <VolumenFilter
-            volume={filters.volume}
-            onChange={(vol) => onFilterChange("volume", vol)}
+          <CategoryFilter
+            title="Rosca"
+            options={Object.values(CodigoRosca)}
+            selected={filters.roscas}
+            onToggle={(v) => onFilterChange("roscas", v)}
           />
 
-          <IndustryFilter
-            industry={filters.industry}
-            onChange={(ind) => onFilterChange("industry", ind)}
+          <CategoryFilter
+            title="Etiquetas"
+            options={Object.values(EtiquetaProducto)}
+            selected={filters.etiquetas}
+            onToggle={(v) => onFilterChange("etiquetas", v)}
+          />
+
+          <VolumeFilter
+            volume={filters.volumen}
+            onChange={(v) => onFilterChange("volumen", v)}
           />
         </div>
-      </div>
+      </motion.div>
     </aside>
   );
 }

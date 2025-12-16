@@ -1,30 +1,92 @@
+import { EtiquetaProducto } from "../../../utils/constants/products/listProducts";
 import Button from "../../UI/Button";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 
 export default function ProductCard({ product, onQuote }) {
+  const etiquetaStyles = {
+    [EtiquetaProducto.STOCK]: "bg-emerald-500/90 text-white",
+
+    [EtiquetaProducto.PEDIDO]: "bg-amber-500/90 text-white",
+
+    [EtiquetaProducto.MULTICOLOR]:
+      "bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 text-white",
+
+    [EtiquetaProducto.PERSONALIZADO]:
+      "bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white",
+  };
+
   return (
-    <article className="group bg-bgligth-main dark:bg-bgdark-secondary border border-gray-300/50 dark:border-bgdark-secondary/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200/60 dark:border-white/10 bg-white dark:bg-bgdark-secondary shadow-sm hover:shadow-lg transition-all duration-300">
       {/* Imagen */}
-      <div className="h-48 overflow-hidden">
+      <div className="relative h-52 bg-white overflow-hidden p-3">
         <img
-          src={product.img.src}
-          alt={product.img.alt}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          src={product.img.src ?? "/images/placeholder-product.webp"}
+          alt={`${product.nombre} ${product.volumen}ml ${product.color}`}
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
+
+        {/* Etiquetas */}
+        <div className="absolute top-3 right-3 flex flex-col-reverse items-end gap-2 z-10">
+          {product.etiquetas.map((etiqueta) => (
+            <span
+              key={etiqueta}
+              className={`
+                inline-flex items-center whitespace-nowrap
+                text-[10px] uppercase tracking-wider font-semibold
+                px-2.5 py-1 rounded-md
+                shadow-sm backdrop-blur-md
+                border border-black/5
+                ${etiquetaStyles[etiqueta]}
+              `}
+            >
+              {etiqueta}
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* Contenido */}
-      <div className="p-4 flex flex-col flex-1">
+      <div className="flex flex-col flex-1 p-5">
         {/* Título */}
-        <h3 className="text-base font-semibold text-text-light dark:text-text-dark mb-1">
-          {product.title}
+        <h3 className="text-base font-semibold text-text-light dark:text-text-dark leading-tight mb-1">
+          {product.nombre}
+          {product.volumen && (
+            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+              {" "}
+              · {product.volumen} ml
+            </span>
+          )}
         </h3>
 
-        {/* Descripción */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">
-          {product.description}
-        </p>
+        {/* Meta info */}
+        <div className="space-y-1 text-sm text-gray-600 dark:text-gray-400 mb-4">
+          <p>
+            <span className="font-medium">Color:</span> {product.color}
+          </p>
+          <p>
+            <span className="font-medium">Rosca:</span> {product.rosca.diametro}{" "}
+            mm
+            {product.rosca.estandar && ` / ${product.rosca.estandar}`}
+          </p>
+          {product.piezasPorPaquete && (
+            <p className="font-semibold text-gray-700 dark:text-gray-300">
+              {product.piezasPorPaquete} PZS / PAQ
+            </p>
+          )}
+        </div>
+
+        {/* Categorías */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          {product.categorias.map((cat) => (
+            <span
+              key={cat}
+              className="text-[11px] px-2 py-1 rounded-full bg-gray-100 dark:bg-bgdark-main text-gray-600 dark:text-gray-400"
+            >
+              {cat}
+            </span>
+          ))}
+        </div>
 
         {/* Acción */}
         <div className="mt-auto">
@@ -33,10 +95,10 @@ export default function ProductCard({ product, onQuote }) {
             size="sm"
             type="secondary"
             onClick={() => onQuote(product)}
-            aria-label={`Cotizar ${product.title}`}
             className="w-full"
+            aria-label={`Cotizar ${product.nombre} ${product.volumen} ml`}
           >
-            Cotizar
+            Añadir a Cotización
           </Button>
         </div>
       </div>
