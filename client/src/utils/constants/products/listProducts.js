@@ -30,7 +30,6 @@ const CodigoRosca = Object.freeze({
   ROSCA_45: "45",
   ROSCA_20: "20",
   ROSCA_24: "24",
-  ROSCA_26: "26",
   ROSCA_38: "38",
   ROSCA_63: "63",
   ROSCA_110: "110",
