@@ -2,7 +2,7 @@ export default function VolumeFilter({
   volume,
   onChange,
   min = 50,
-  max = 5000,
+  max = 10000,
 }) {
   return (
     <div>
