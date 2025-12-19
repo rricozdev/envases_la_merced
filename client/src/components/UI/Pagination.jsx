@@ -29,7 +29,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="Página anterior"
-            className="px-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+            className=" cursor-pointerpx-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700 cursor-pointer"
           >
             ‹
           </button>
@@ -41,7 +41,8 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             <li className="hidden sm:block">
               <button
                 onClick={() => onPageChange(1)}
-                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700
+                cursor-pointer"
               >
                 1
               </button>
@@ -61,7 +62,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
               className={`px-3 sm:px-4 h-10 font-medium transition-colors ${
                 currentPage === page
                   ? "bg-txtligth-primary text-white dark:bg-brand-primary"
-                  : "text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+                  : "text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700 cursor-pointer"
               }`}
             >
               {page}
@@ -78,7 +79,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             <li className="hidden sm:block">
               <button
                 onClick={() => onPageChange(totalPages)}
-                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+                className="px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700 cursor-pointer"
               >
                 {totalPages}
               </button>
@@ -92,7 +93,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="Página siguiente"
-            className="px-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700"
+            className="px-3 sm:px-4 h-10 font-medium text-gray-500 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-bgdark-secondary dark:text-gray-400 dark:hover:bg-gray-700 cursor-pointer"
           >
             ›
           </button>
