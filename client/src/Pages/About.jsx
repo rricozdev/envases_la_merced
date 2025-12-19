@@ -12,16 +12,17 @@ export default function About() {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero
-          title="Nuestra Historia: Forjando el Futuro del Embalaje"
-          description="Desde nuestra fundación, hemos estado comprometidos con la calidad y la innovación en cada envase que producimos."
+          srcImg={"/bg_about.jpg"}
+          title="Forjando el Futuro del Embalaje"
+          description="Desde nuestra fundación, hemos estado comprometidos con la calidad y la innovación en cada envase que fabricamos y distribuimos."
           type="secondary"
           showButton={false}
         />
       </div>
       {/* ¿Quiénes somos? */}
       <ImageTextSection
-        imageSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuA3KsgqLlNuZejLdEDcPZ2mc_0KKxLbluwcQOvwvH9frMX6htuosHhy_d5KHMdXmROQ4j_cnwjq_f30_DvpRZYCkVXkIicmJM6iRjTYReXd750FDov6V4hl_QBSmQGXAzvibE_vqb6hBztJtRdNwTBYaIGyzRUIQjvQ7oR7HF0GzU1Nn8uoRhXIB31LkJHt6KVAXz9jN57LlFKYiFVZRq2UeCpvIouVXTcRHMesiSCWuoW4OO6iSp1R4F0DhfpFqp2GCeiX7wqBURA"
-        imageAlt="Fotografía de instalaciones industriales"
+        imageSrc="about_quienes_somos.jpeg"
+        imageAlt="Banner con productos de envases PET"
         title="¿Quiénes somos?"
         description={`Envases La Merced nació en el año 2021 como una empresa dedicada a la distribución de envases PET, con un objetivo claro: acercar productos de calidad directamente desde fábrica a nuestros clientes, de forma accesible, práctica y confiable.
 
@@ -121,8 +122,7 @@ export default function About() {
             <div
               className="w-full bg-center bg-no-repeat aspect-4/3 bg-cover rounded-lg"
               style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAC2vRsLz2Y0ub-6IxjJMWA4isse6GmhX5dEGukBSCvdXx3j1sEY1VMCe7mWcVvV-mt8-T9BfuVLLB-7m4MhdAJmDj9lyOqSACmeMPMW0e6X9zSTukMB1p9oSMjneW0SXibbvHHD7U4yPoSnc4FCOfkct02oEdO8kmfHQf4uQBYyCwH7xtzv8ACVnp3pTwvsWrZiBfId1yuVQ7ll0eq8lbKZyBJCYOSQfhOWvPxbo1cryz4eysBkx0CQvrrK3q6rVIV7HzAefr_ViA')",
+                backgroundImage: "url('/fondo_home_envaces.png')",
               }}
               role="img"
               aria-label="Equipo de trabajo colaborando"
@@ -134,8 +134,7 @@ export default function About() {
             <div
               className="w-full bg-center bg-no-repeat aspect-4/3 bg-cover rounded-lg order-last md:order-first"
               style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpnIk5eWN31bp5VugbmkGC_dqv4jWjGSLsujLBfBYuHAYHY8UZQVoDWN8-H6cHr2hIOzbhyOjO7D2mj5ZHVjUU1GeoZ7EQXk2S8vnHsoHgN87SneTXOlntw9FOHizd727QCkOfXaFgvwK9YCKrfYRS8ycr-dSdftoJ4hiBg38TcFOmv0iRGyc6_Sj2oPsjPJkxCfzAAUR-Y0VFJJv1c4Kmp6JjixUDD3MQgki3h5X1tIwrGzEeqe36u3nC_U42u3Rcq-o5tMSaBps')",
+                backgroundImage: "url('/about-nostros-misión.png')",
               }}
               role="img"
               aria-label="Instalaciones modernas y sostenibles"
