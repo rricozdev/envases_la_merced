@@ -13,8 +13,12 @@ export default function Footer() {
           {/* Logo y descripción */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex items-center gap-3 justify-center md:justify-start">
-              <div className="w-10 h-10 text-brand-accent shrink-0">
-                {/* Logo SVG */}
+              <div className="w-20  text-brand-accent shrink-0">
+                <img
+                  className="w-full h-full object-contain"
+                  src="/logo_dark_mode.png"
+                  alt="Logo de Envases La Merced"
+                />
               </div>
               <h2 className="text-xl font-bold">Envases La Merced</h2>
             </div>
