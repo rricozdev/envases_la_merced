@@ -43,8 +43,15 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 text-primary shrink-0">{/* SVG */}</div>
-              <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold  ">
+              <div className="w- h-10 text-primary shrink-0">
+                <img
+                  className="w-full h-full object-contain"
+                  src={isDark ? "/logo_dark_mode.png" : "logo_light_mode.png"}
+                  alt="logo envaces la merced"
+                  srcset=""
+                />
+              </div>
+              <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold hidden sm:block">
                 Envases La Merced
               </h1>
             </Link>
