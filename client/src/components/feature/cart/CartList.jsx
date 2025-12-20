@@ -16,7 +16,7 @@ export default function CartList() {
   return (
     <ul className="flex-1 overflow-y-auto p-4 space-y-4 divide-y" role="list">
       {cart.map((item) => (
-        <CartItem key={item.id} item={item} />
+        <CartItem key={`${item.id}-${cart.quantity}`} item={item} />
       ))}
     </ul>
   );
