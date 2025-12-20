@@ -1291,6 +1291,20 @@ const CatalogoProductos = Object.freeze({
         alt: "tarro-1000-cristal",
       },
     },
+    {
+      id: "tarro-500-colores",
+      nombre: "Tarro",
+      volumen: 500,
+      categorias: [CategoriaProducto.TARROS],
+      rosca: { diametro: CodigoRosca.ROSCA_63, estandar: null },
+      piezasPorPaquete: 112,
+      color: ColorProducto.COLORES,
+      etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
+      img: {
+        src: "tarro_colores.jpg",
+        alt: "tarro-1000-Colores",
+      },
+    },
 
     // =========================
     // TAPA TARRO
