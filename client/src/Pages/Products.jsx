@@ -53,7 +53,7 @@ export default function Products() {
       colores: [],
       etiquetas: [],
       roscas: [],
-      volumen: 1000,
+      volumen: 5000,
     });
   };
 

@@ -682,7 +682,7 @@ const CatalogoProductos = Object.freeze({
         diametro: CodigoRosca.ROSCA_28,
         estandar: null,
       },
-      piezasPorPaquete: 312,
+      piezasPorPaquete: 180,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
@@ -764,7 +764,7 @@ const CatalogoProductos = Object.freeze({
       id: "lapiz-25-cristal",
       nombre: "Lapiz",
       volumen: 25,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -781,7 +781,7 @@ const CatalogoProductos = Object.freeze({
       id: "invertida-30-cristal",
       nombre: "Invertida",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -798,7 +798,7 @@ const CatalogoProductos = Object.freeze({
       id: "institucional-30-cristal",
       nombre: "Institucional",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -815,7 +815,7 @@ const CatalogoProductos = Object.freeze({
       id: "cilindrica-30-cristal",
       nombre: "Cilindrica",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -832,7 +832,7 @@ const CatalogoProductos = Object.freeze({
       id: "cilindrica-40-cristal",
       nombre: "Cilindrica",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -849,7 +849,7 @@ const CatalogoProductos = Object.freeze({
       id: "cubo-40-cristal",
       nombre: "Cubo",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -866,7 +866,7 @@ const CatalogoProductos = Object.freeze({
       id: "farma-40-cristal",
       nombre: "Farma",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -883,7 +883,7 @@ const CatalogoProductos = Object.freeze({
       id: "Licorera-50-cristal",
       nombre: "Licorera",
       volumen: 50,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -900,7 +900,7 @@ const CatalogoProductos = Object.freeze({
       id: "Oliva-45-cristal",
       nombre: "Oliva",
       volumen: 45,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -917,7 +917,7 @@ const CatalogoProductos = Object.freeze({
       id: "Oval-60-cristal",
       nombre: "Oval",
       volumen: 60,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_20,
         estandar: null,
@@ -939,7 +939,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -953,7 +956,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -967,7 +973,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -985,7 +994,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -999,7 +1011,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -1013,7 +1028,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
