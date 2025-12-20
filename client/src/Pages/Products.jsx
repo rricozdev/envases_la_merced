@@ -17,9 +17,10 @@ export default function Products() {
     colores: [],
     etiquetas: [],
     roscas: [],
-    volumen: 5000,
+    search: "",
   });
 
+  /* ================== SCROLL ================== */
   useEffect(() => {
     window.scrollTo({
       top: 300,
@@ -27,9 +28,12 @@ export default function Products() {
     });
   }, [currentPage]);
 
-  const handleFilterChange = (type, value) => {
+  /* ================== RESET PAGINA AL FILTRAR ================== */
+  useEffect(() => {
     setCurrentPage(1);
+  }, [filters]);
 
+  const handleFilterChange = (type, value) => {
     setFilters((prev) => {
       const current = prev[type];
 
@@ -47,17 +51,16 @@ export default function Products() {
   };
 
   const handleClearAll = () => {
-    setCurrentPage(1);
     setFilters({
       categorias: [],
       colores: [],
       etiquetas: [],
       roscas: [],
-      volumen: 1000,
+      search: "",
     });
   };
 
-  /* ================== FILTRADO REAL ================== */
+  /* ================== FILTRADO ================== */
   const filteredProducts = useMemo(() => {
     return CatalogoProductos.productos.filter((product) => {
       if (
@@ -81,16 +84,24 @@ export default function Products() {
       )
         return false;
 
-      if (filters.volumen && product.volumen > filters.volumen) return false;
+      if (filters.search) {
+        const search = filters.search.toLowerCase().trim();
+        if (
+          !`${product.nombre.toLowerCase()} ${product.volumen}`.includes(search)
+        )
+          return false;
+      }
 
       return true;
     });
   }, [filters]);
 
-  /* ================== PAGINACIÓN ================== */
+  /* ================== PAGINACIÓN SEGURA ================== */
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
   const paginatedProducts = useMemo(() => {
+    if (filteredProducts.length === 0) return [];
+
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
@@ -118,7 +129,7 @@ export default function Products() {
             <div className="w-full lg:w-3/4">
               <ProductGrid products={paginatedProducts} onQuote={addToCart} />
 
-              {totalPages > 1 && (
+              {filteredProducts.length > 0 && totalPages > 1 && (
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
