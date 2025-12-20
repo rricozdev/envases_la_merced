@@ -1,0 +1,241 @@
+{
+  "responses": [
+    {
+      "triggers": [
+        "hola",
+        "hi",
+        "hello",
+        "hey",
+        "buenos días",
+        "buenas tardes",
+        "buenas noches",
+        "saludos",
+        "qué tal",
+        "como estas",
+        "¿cómo estás?"
+      ],
+      "response": "Puedo ayudarte brindándote información de:\n\n• **Productos / Catálogo**\n\n• **Sucursales**\n\n• **Precios / Cotización**\n\n• **Hablar con un asesor**\n\nEscribe la opción que necesites para continuar.",
+      "type": "greeting"
+    },
+    {
+      "triggers": [
+        "productos",
+        "producto",
+        "catálogo",
+        "catalogo",
+        "ver productos",
+        "ver catálogo",
+        "qué venden",
+        "qué ofrecen"
+      ],
+      "response": "Contamos con una amplia variedad de **envases PET** para diferentes usos.\n\nNuestros productos están diseñados para:\n\n• **Alimentos**\n• **Bebidas**\n• **Cosméticos**\n• **Farmacéuticos**\n• **Limpieza**\n\nEscribe la categoría que te interese para continuar.",
+      "type": "products_intro"
+    },
+    {
+      "triggers": ["alimentos"],
+      "response": "Perfecto.\n\nContamos con envases PET para **productos alimenticios**.\n\n¿El envase que buscas es para:\n\n• **Líquidos** (salsas, aceites)\n• **Sólidos** (granos, polvos)\n• **No lo tengo definido aún**",
+      "type": "category_food"
+    },
+    {
+      "triggers": ["líquidos", "liquidos"],
+      "response": "Perfecto.\n\nPara **alimentos líquidos** como salsas y aceites, contamos con envases PET seguros y resistentes.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "food_liquids"
+    },
+    {
+      "triggers": ["sólidos", "solidos"],
+      "response": "Muy bien.\n\nPara **alimentos sólidos** como granos y polvos, contamos con envases PET prácticos y durables.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "food_solids"
+    },
+    {
+      "triggers": ["no lo tengo definido", "no lo tengo definido aún"],
+      "response": "No hay problema.\n\nUn asesor puede ayudarte a definir el envase ideal según tu producto.\n\nEscribe **asesor** para continuar o **productos** para ver otras opciones.",
+      "type": "unsure_generic"
+    },
+    {
+      "triggers": ["bebidas"],
+      "response": "Muy bien.\n\nTenemos envases PET ideales para **bebidas**.\n\n¿Para qué tipo de bebida lo necesitas?\n\n• **Agua**\n• **Refresco**\n• **Bebida artesanal**\n• **No estoy seguro**",
+      "type": "category_drinks"
+    },
+    {
+      "triggers": ["agua"],
+      "response": "Perfecto.\n\nPara **agua**, contamos con envases PET resistentes y ligeros.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "drink_water"
+    },
+    {
+      "triggers": ["refresco", "gaseosa"],
+      "response": "Entendido.\n\nPara **refrescos**, manejamos envases PET aptos para bebidas carbonatadas.\n\n¿Qué capacidad aproximada necesitas?",
+      "type": "drink_soda"
+    },
+    {
+      "triggers": ["bebida artesanal", "artesanal"],
+      "response": "Excelente.\n\nPara **bebidas artesanales**, contamos con envases PET ideales para proyectos personalizados.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "drink_artisan"
+    },
+    {
+      "triggers": ["cosméticos", "cosmeticos"],
+      "response": "Entendido.\n\nManejamos envases PET para **productos cosméticos**.\n\n¿El envase sería para:\n\n• **Cremas**\n• **Shampoo / líquidos**\n• **Otro producto cosmético**",
+      "type": "category_cosmetics"
+    },
+    {
+      "triggers": ["cremas", "crema"],
+      "response": "Perfecto.\n\nPara **cremas cosméticas**, manejamos envases PET prácticos y resistentes.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "cosmetics_creams"
+    },
+    {
+      "triggers": ["shampoo", "champú"],
+      "response": "Entendido.\n\nPara **shampoo y cosméticos líquidos**, contamos con envases PET ligeros y funcionales.\n\n¿Qué capacidad aproximada necesitas?",
+      "type": "cosmetics_liquids"
+    },
+    {
+      "triggers": ["farmacéuticos", "farmaceuticos", "farmacia"],
+      "response": "De acuerdo.\n\nContamos con envases PET para **uso farmacéutico**.\n\n¿El envase es para:\n\n• **Jarabes**\n• **Tabletas / cápsulas**\n• **Otro uso**",
+      "type": "category_pharma"
+    },
+    {
+      "triggers": ["jarabes"],
+      "response": "Perfecto.\n\nPara **jarabes**, contamos con envases PET seguros y confiables.\n\n¿Qué capacidad aproximada necesitas?",
+      "type": "pharma_syrups"
+    },
+    {
+      "triggers": ["tabletas", "cápsulas", "capsulas"],
+      "response": "Entendido.\n\nPara **tabletas o cápsulas**, manejamos envases PET adecuados para sólidos farmacéuticos.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "pharma_solids"
+    },
+    {
+      "triggers": ["limpieza"],
+      "response": "Perfecto.\n\nTenemos envases PET para **productos de limpieza**.\n\n¿El envase es para:\n\n• **Detergentes**\n• **Desinfectantes**\n• **Otro producto de limpieza**",
+      "type": "category_cleaning"
+    },
+    {
+      "triggers": ["detergentes"],
+      "response": "Muy bien.\n\nPara **detergentes**, contamos con envases PET resistentes.\n\n¿Qué capacidad aproximada necesitas?",
+      "type": "cleaning_detergents"
+    },
+    {
+      "triggers": ["desinfectantes"],
+      "response": "Entendido.\n\nPara **desinfectantes**, manejamos envases PET adecuados para líquidos químicos.\n\n¿Qué capacidad aproximada buscas?",
+      "type": "cleaning_disinfectants"
+    },
+    {
+      "triggers": [
+        "50 ml",
+        "50ml",
+        "60 ml",
+        "60ml",
+        "100 ml",
+        "100ml",
+        "120 ml",
+        "120ml",
+        "250 ml",
+        "250ml",
+        "330 ml",
+        "330ml",
+        "500 ml",
+        "500ml",
+        "600 ml",
+        "600ml",
+        "750 ml",
+        "750ml",
+        "1 L",
+        "1L",
+        "1.5 L",
+        "1.5L",
+        "2 L",
+        "2L",
+        "5 L",
+        "5L"
+      ],
+      "response": "Excelente.\n\nContamos con envases PET en esa capacidad.\n\nUn asesor puede ayudarte a validar disponibilidad, tapa compatible y cotización.\n\nEscribe **asesor** para continuar o **productos** para ver otras opciones.",
+      "type": "capacity_generic"
+    },
+    {
+      "triggers": [
+        "10 ml",
+        "10ml",
+        "20 ml",
+        "20ml",
+        "30 ml",
+        "30ml",
+        "40 ml",
+        "40ml"
+      ],
+      "response": "Entiendo.\n\nEn este caso es mejor comunicarnos con un asesor comercial.\n\nUn asesor puede ayudarte a encontrar la mejor opción para tu producto.\n\nEscribe **asesor** para continuar o **productos** para ver otras opciones.",
+      "type": "capacity_not_available"
+    },
+    {
+      "triggers": [
+        "sucursal",
+        "sucursales",
+        "oficinas",
+        "ubicaciones",
+        "donde están",
+        "dónde están"
+      ],
+      "response": "Contamos con las siguientes **sucursales**:\n\n• **CDMX**\n• **Puebla**\n• **Veracruz**\n• **Nezahualcóyotl**\n• **Querétaro**\n\nEscribe el nombre de la sucursal para ver dirección y horarios.",
+      "type": "branch_list"
+    },
+    {
+      "triggers": ["cdmx", "ciudad de méxico", "ciudad de mexico"],
+      "response": "**Sucursal CDMX**\n\n📍 Azafrán 380, Granjas México, Iztacalco\n🕒 Lun–Jue 8:00–17:00 | Vie 8:00–15:30",
+      "type": "branch_cdmx"
+    },
+    {
+      "triggers": ["puebla"],
+      "response": "**Sucursal Puebla**\n\n📍 Miguel Hidalgo 6155, Col. El Patrimonio\n🕒 Lun–Jue 8:00–17:00 | Vie 8:00–15:30",
+      "type": "branch_puebla"
+    },
+    {
+      "triggers": ["veracruz"],
+      "response": "**Sucursal Veracruz**\n\n📍 Igualdad 1398, Unidad Veracruzana\n🕒 Lun–Jue 8:00–17:00 | Vie 8:00–15:30",
+      "type": "branch_veracruz"
+    },
+    {
+      "triggers": ["nezahualcóyotl", "nezahualcoyotl", "neza"],
+      "response": "**Sucursal Nezahualcóyotl**\n\n📍 Vicente Villada 744\n🕒 Lun–Jue 8:00–17:00 | Vie 8:00–15:30",
+      "type": "branch_neza"
+    },
+    {
+      "triggers": ["querétaro", "queretaro"],
+      "response": "**Sucursal Querétaro**\n\n📍 George Washington 312, Col. Libertadores\n🕒 Lun–Jue 8:00–17:00 | Vie 8:00–15:30",
+      "type": "branch_queretaro"
+    },
+    {
+      "triggers": [
+        "precio",
+        "precios",
+        "cotización",
+        "cotizar",
+        "cuánto cuesta",
+        "cuanto cuesta",
+        "presupuesto",
+        "costo",
+        "costos"
+      ],
+      "response": "El **precio de los envases PET** depende del tipo, capacidad, cantidad y si es estándar o personalizado.\n\nPara cotización exacta, escribe **asesor**.",
+      "type": "pricing_intro"
+    },
+    {
+      "triggers": [
+        "whatsapp",
+        "wsp",
+        "asesor",
+        "asesores",
+        "hablar con un asesor",
+        "contactar",
+        "ayuda",
+        "soporte"
+      ],
+      "response": "Haz clic en el botón de WhatsApp para continuar la conversación con un asesor.",
+      "type": "whatsapp",
+      "payload": {
+        "phone": "+5215576576045",
+        "message": "Hola, quiero hablar con un asesor"
+      }
+    },
+    {
+      "triggers": ["default"],
+      "response": "No logré entender el mensaje.\n\nPuedes escribir alguna de estas opciones:\n\n• **Productos / Catálogo**\n• **Sucursales**\n• **Precios / Cotización**\n• **Hablar con un asesor**",
+      "type": "default"
+    }
+  ]
+}
