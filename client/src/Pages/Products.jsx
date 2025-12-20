@@ -17,7 +17,7 @@ export default function Products() {
     colores: [],
     etiquetas: [],
     roscas: [],
-    volumen: 5000,
+    volumen: 10000,
   });
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Products() {
       colores: [],
       etiquetas: [],
       roscas: [],
-      volumen: 5000,
+      volumen: 10000,
     });
   };
 

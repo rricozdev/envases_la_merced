@@ -1596,7 +1596,7 @@ const CatalogoProductos = Object.freeze({
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],
       rosca: { diametro: CodigoRosca.ROSCA_24, estandar: null },
-      piezasPorPaquete: 600,
+      piezasPorPaquete: 2000,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
@@ -1666,7 +1666,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Flip Top",
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],
-      rosca: { diametro: CodigoRosca.ROSCA_18, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_18,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 1000,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -1725,6 +1728,23 @@ const CatalogoProductos = Object.freeze({
       img: {
         src: "flip-flop-2.jpg",
         alt: "Flip-Top-r-24-415",
+      },
+    },
+    {
+      id: "Flip-Top-r-28-410",
+      nombre: "Flip Top",
+      volumen: null,
+      categorias: [CategoriaProducto.COMPLEMENTOS],
+      rosca: {
+        diametro: CodigoRosca.ROSCA_28,
+        estandar: RoscaEstandar.GPI_410,
+      },
+      piezasPorPaquete: 1000,
+      color: ColorProducto.BLANCO,
+      etiquetas: [EtiquetaProducto.STOCK],
+      img: {
+        src: "flip-flop-2.jpg",
+        alt: "Flip-Top-r-28-410",
       },
     },
     {
