@@ -7,7 +7,7 @@ import {
 } from "../../../utils/constants/products/listProducts";
 import Button from "../../UI/Button";
 import CategoryFilter from "./filters/CategoryFilter";
-import SearchFilter from "./filters/searchFilter";
+import SearchFilter from "./filters/SearchFilter";
 
 export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
   return (
