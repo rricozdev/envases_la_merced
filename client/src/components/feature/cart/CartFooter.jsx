@@ -26,13 +26,16 @@ export default function CartFooter() {
 
           {/* //todo: agregar el enlace a la cotización  */}
           <Button size="sm" variant="outline" onClick={() => setOpen(!isOpen)}>
-            Solicitar cotización
+            {isOpen ? "Pedir Cotización" : "Cerrar Sucursales"}
           </Button>
           <div
             className={`${
               isOpen ? "hidden" : "block"
-            } absolute w-50 h-50 top-[-200px] bg-bgligth-secondary dark:bg-bgdark-main right-2 flex flex-col gap-2 p-4 rounded shadow-inner`}
+            } absolute w-50 h-60 top-[-250px] bg-bgligth-secondary dark:bg-bgdark-main right-2 flex flex-col gap-2 p-4 rounded shadow-inner`}
           >
+            <h3 className="text-xs text-txtligth-primary dark:text-txtdark-primary">
+              Seleccione la sucursal de su interes
+            </h3>
             {CITIES.map((city, i) => (
               <Button size="sm" type="secondary" fullWidth key={i}>
                 {city}
