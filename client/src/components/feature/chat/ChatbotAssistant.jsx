@@ -53,7 +53,7 @@ const ChatbotAssistant = () => {
           }
           setIsOpen((prev) => !prev);
         }}
-        className={`fixed bottom-4 right-4 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.3)] transition-transform duration-500 ${
+        className={`fixed bottom-4 right-4 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.3)] transition-transform duration-500 cursor-pointer ${
           isOpen ? "rotate-28" : ""
         }`}
         style={{
@@ -66,16 +66,17 @@ const ChatbotAssistant = () => {
 
       {/* POPUP */}
       <div
-        className={`fixed bottom-[88px] right-4 z-50 w-[88vw] max-w-[380px] h-[70vh] max-h-[520px] rounded-2xl overflow-hidden flex flex-col shadow-[0_32px_64px_-24px_rgba(0,0,0,0.4)] transition-all duration-500 ${
+        className={`fixed bottom-[88px] right-4 z-50 w-[88vw] max-w-[380px] h-[70vh] max-h-[520px] rounded-2xl overflow-hidden flex flex-col shadow-[0_32px_64px_-24px_rgba(0,0,0,0.4)] transition-all duration-700 ${
           isOpen
-            ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-            : "opacity-0 translate-y-full scale-[0.92] pointer-events-none"
+            ? "opacity-100 scale-100 pointer-events-auto"
+            : "opacity-0 scale-0 pointer-events-none"
         }`}
         style={{
           transformOrigin: "bottom right",
+          transform: isOpen ? "translate(0, 0)" : "translate(20px, 20px)",
           background: "#ffffff",
           color: "#1e3a5f",
-          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
+          transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)",
         }}
       >
         {/* HEADER */}
