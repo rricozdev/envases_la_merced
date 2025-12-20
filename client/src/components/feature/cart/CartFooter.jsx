@@ -1,12 +1,16 @@
 import { useContext, useState } from "react";
+import { messageWhasapSchemaCartProduct } from "../../../feature/chat/messageWhasapSchema";
+import { openWhatsApp } from "../../../feature/chat/whatsappAction";
 import { CartContext } from "../../../Providers/CartProvider";
+import { sucursalesData } from "../../../utils/constants/sucursales";
 import Button from "../../UI/Button";
-
-const CITIES = ["CDMX", "Puebla", "Veracruz", "Neza", "Querétaro"];
 
 export default function CartFooter() {
   const { cart, clearCart } = useContext(CartContext);
   const [isOpen, setOpen] = useState(false);
+
+  console.log(messageWhasapSchemaCartProduct(cart));
+
   return (
     <footer className="border-t p-4 bg-bgligth-main dark:bg-bgdark-tertiary relative">
       <div className="flex items-center justify-between gap-3">
@@ -24,21 +28,31 @@ export default function CartFooter() {
             Limpiar
           </Button>
 
-          {/* //todo: agregar el enlace a la cotización  */}
           <Button size="sm" variant="outline" onClick={() => setOpen(!isOpen)}>
             {isOpen ? "Pedir Cotización" : "Cerrar Sucursales"}
           </Button>
           <div
             className={`${
-              isOpen ? "hidden" : "block"
+              isOpen ? "block" : "hidden"
             } absolute w-50 h-60 top-[-250px] bg-bgligth-secondary dark:bg-bgdark-main right-2 flex flex-col gap-2 p-4 rounded shadow-inner`}
           >
             <h3 className="text-xs text-txtligth-primary dark:text-txtdark-primary">
-              Seleccione la sucursal de su interes
+              Seleccione la sucursal de su interés.
             </h3>
-            {CITIES.map((city, i) => (
-              <Button size="sm" type="secondary" fullWidth key={i}>
-                {city}
+            {sucursalesData.map(({ name, whatsapp }, i) => (
+              <Button
+                size="sm"
+                type="secondary"
+                fullWidth
+                key={i}
+                onClick={() =>
+                  openWhatsApp({
+                    phone: whatsapp,
+                    message: messageWhasapSchemaCartProduct(cart),
+                  })
+                }
+              >
+                {name}
               </Button>
             ))}
           </div>

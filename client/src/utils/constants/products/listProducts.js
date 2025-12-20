@@ -1748,7 +1748,7 @@ const CatalogoProductos = Object.freeze({
       },
     },
     {
-      id: "Flip-Top-r-28-410",
+      id: "Flip-Top-r-28-410-29",
       nombre: "Flip Top",
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],

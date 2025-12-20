@@ -5,8 +5,6 @@ import CartItem from "./CartItem";
 export default function CartList() {
   const { cart } = useContext(CartContext);
 
-  console.log(cart);
-
   if (cart.length === 0) {
     return (
       <div className="flex-1 p-4 text-sm text-gray-500">

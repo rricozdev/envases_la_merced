@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   CategoriaProducto,
   CodigoRosca,
@@ -6,8 +7,7 @@ import {
 } from "../../../utils/constants/products/listProducts";
 import Button from "../../UI/Button";
 import CategoryFilter from "./filters/CategoryFilter";
-import VolumeFilter from "./filters/VolumenFilter";
-import { motion } from "framer-motion";
+import SearchFilter from "./filters/searchFilter";
 
 export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
   return (
@@ -26,6 +26,10 @@ export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
             </Button>
           </header>
 
+          <SearchFilter
+            search={filters.search}
+            onSearchChange={(value) => onFilterChange("search", value)}
+          />
           <CategoryFilter
             title="Categorías"
             options={Object.values(CategoriaProducto)}
@@ -52,11 +56,6 @@ export default function FilterSidebar({ filters, onFilterChange, onClearAll }) {
             options={Object.values(EtiquetaProducto)}
             selected={filters.etiquetas}
             onToggle={(v) => onFilterChange("etiquetas", v)}
-          />
-
-          <VolumeFilter
-            volume={filters.volumen}
-            onChange={(v) => onFilterChange("volumen", v)}
           />
         </div>
       </motion.div>
