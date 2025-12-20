@@ -43,7 +43,7 @@ const ChatbotAssistant = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-10">
       {/* BOTÓN FLOTANTE */}
 
       <button
@@ -68,8 +68,8 @@ const ChatbotAssistant = () => {
       <div
         className={`fixed bottom-[88px] right-4 z-50 w-[88vw] max-w-[380px] h-[70vh] max-h-[520px] rounded-2xl overflow-hidden flex flex-col shadow-[0_32px_64px_-24px_rgba(0,0,0,0.4)] transition-all duration-500 ${
           isOpen
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 translate-y-5 scale-[0.92]"
+            ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+            : "opacity-0 translate-y-full scale-[0.92] pointer-events-none"
         }`}
         style={{
           transformOrigin: "bottom right",
