@@ -6,6 +6,7 @@ import CartDrawer from "../cart/CartDrawer";
 import Header from "./Header";
 import Footer from "./Footer";
 import Loader from "../../UI/Loader.jsx";
+import Chat from "../chat/ChatbotAssistant.jsx";
 
 export default function Layout() {
   return (
@@ -19,6 +20,7 @@ export default function Layout() {
         </Suspense>
 
         <CartDrawer />
+        <Chat />
       </main>
 
       <Footer />
