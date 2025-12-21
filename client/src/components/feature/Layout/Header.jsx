@@ -48,7 +48,6 @@ export default function Header() {
                   className="w-full h-full object-contain"
                   src={isDark ? "/logo_dark_mode.png" : "logo_light_mode.png"}
                   alt="logo envaces la merced"
-                  srcset=""
                 />
               </div>
               <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold hidden sm:block">

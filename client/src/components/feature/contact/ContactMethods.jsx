@@ -20,14 +20,14 @@ export default function ContactMethods() {
               <p className="text-base font-semibold text-txtligth-primary dark:text-txtdark-primary group-hover:text-primary">
                 Llámenos
               </p>
-              <p>+52 55 1234 5678</p>
+              <p>+5215576576045</p>
             </div>
           </a>
         </li>
         <li>
           <a
             className="flex items-center gap-4 text-txtligth-secondary dark:text-txtdark-secondary hover:text-brand-accent-hover transition-colors"
-            href="tel:+525512345678"
+            href="tel:+5215576576045"
           >
             <div className="w-12 h-12 rounded-full bg-brand-accent/20 text-txtligth-primary dark:text-brand-accent flex items-center justify-center">
               <EmailRoundedIcon />
@@ -43,7 +43,7 @@ export default function ContactMethods() {
         <li>
           <a
             className="flex items-center gap-4 text-txtligth-secondary dark:text-txtdark-secondary hover:text-brand-accent-hover transition-colors"
-            href="tel:+525512345678"
+            href="tel:+5215576576045"
           >
             <div className="w-12 h-12 rounded-full bg-brand-accent/20 text-txtligth-primary dark:text-brand-accent flex items-center justify-center">
               <LocationOnRoundedIcon />
@@ -52,7 +52,11 @@ export default function ContactMethods() {
               <p className="text-base font-semibold text-txtligth-primary dark:text-txtdark-primary group-hover:text-primary">
                 Oficina Central
               </p>
-              <p> Av. Insurgentes Sur 123, CDMX, México</p>
+              <p>
+                {" "}
+                Azafrán 380, Granjas México Iztacalco, CP 08400 Ciudad de
+                México, CDMX
+              </p>
             </div>
           </a>
         </li>

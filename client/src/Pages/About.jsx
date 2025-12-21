@@ -4,7 +4,9 @@ import Hero from "../components/UI/Hero";
 import ImageTextSection from "../components/UI/ImageTextSection";
 import SectionHeader from "../components/UI/SectionHeader";
 import ValueCard from "../components/feature/about/ValueCard";
+import { openWhatsApp } from "../feature/chat/whatsappAction";
 import cardValues from "../utils/constants/about/cardValues";
+import { BRANCH_PHONES } from "../utils/constants/branchPhones";
 
 export default function About() {
   return (
@@ -177,6 +179,12 @@ export default function About() {
       {/* CTA Final */}
       <div className="pb-20 sm:pb-24">
         <CTASection
+          onButtonClick={() =>
+            openWhatsApp({
+              phone: BRANCH_PHONES.CDMX.whatsapp,
+              message: "Estoy interesado en sus productos.",
+            })
+          }
           variant="primary"
           title="¿Listo para encontrar la solución perfecta?"
           description="Nuestro equipo está preparado para asesorarle y ofrecerle el envase que mejor se adapte a sus necesidades. Hablemos de su proyecto."
