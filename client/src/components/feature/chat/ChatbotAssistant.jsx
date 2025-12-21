@@ -53,9 +53,8 @@ const ChatbotAssistant = () => {
           }
           setIsOpen((prev) => !prev);
         }}
-        className={`fixed bottom-4 right-4 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.3)] transition-transform duration-500 cursor-pointer ${
-          isOpen ? "rotate-28" : ""
-        }`}
+        className={`fixed bottom-4 right-4 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.3)] transition-transform duration-500 cursor-pointer hover:scale-110 hover:shadow[0_16px_40px_rgba(0,0,0,0.4)]
+active:scale-95  ${isOpen ? "rotate-28" : ""}`}
         style={{
           background: "var(--color-brand-accent)",
           transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
