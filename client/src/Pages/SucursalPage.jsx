@@ -166,24 +166,6 @@ const SucursalPage = () => {
             >
               Agendar visita
             </Button>
-
-            {/* Solicitar cotización */}
-            <Button
-              type="secondary"
-              variant="solid"
-              size="md"
-              fullWidth
-              className="sm:w-auto"
-              onClick={() =>
-                window.open(
-                  `https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              Solicitar cotización desde esta sucursal
-            </Button>
           </div>
         </div>
       </div>

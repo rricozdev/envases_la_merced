@@ -1,14 +1,14 @@
 const CategoriaProducto = Object.freeze({
-  FARMACIA: "Farmacéutico",
-  COSMETICO: "Cosméticos",
-  LIMPIEZA: "Limpieza",
-  AMENIDADES: "Amenidades",
-  TARROS: "Tarros y vitroleros",
   AGUA: "Agua y bebidas",
-  PROMOCIONALES: "Promocionales",
+  AMENIDADES: "Amenidades",
+  COSMETICO: "Cosméticos",
   ESPECIEROS: "Especieros",
-  COMPLEMENTOS: "Tapas y complementos",
+  FARMACIA: "Farmacéutico",
   GARRAFAS: "Garrafas",
+  LIMPIEZA: "Limpieza",
+  PROMOCIONALES: "Promocionales",
+  TARROS: "Tarros y vitroleros",
+  COMPLEMENTOS: "Tapas y complementos",
 });
 
 const EtiquetaProducto = Object.freeze({
@@ -682,7 +682,7 @@ const CatalogoProductos = Object.freeze({
         diametro: CodigoRosca.ROSCA_28,
         estandar: null,
       },
-      piezasPorPaquete: 312,
+      piezasPorPaquete: 180,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
@@ -764,7 +764,7 @@ const CatalogoProductos = Object.freeze({
       id: "lapiz-25-cristal",
       nombre: "Lapiz",
       volumen: 25,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -781,7 +781,7 @@ const CatalogoProductos = Object.freeze({
       id: "invertida-30-cristal",
       nombre: "Invertida",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -798,7 +798,7 @@ const CatalogoProductos = Object.freeze({
       id: "institucional-30-cristal",
       nombre: "Institucional",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -815,7 +815,7 @@ const CatalogoProductos = Object.freeze({
       id: "cilindrica-30-cristal",
       nombre: "Cilindrica",
       volumen: 30,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -832,7 +832,7 @@ const CatalogoProductos = Object.freeze({
       id: "cilindrica-40-cristal",
       nombre: "Cilindrica",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -849,7 +849,7 @@ const CatalogoProductos = Object.freeze({
       id: "cubo-40-cristal",
       nombre: "Cubo",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -866,7 +866,7 @@ const CatalogoProductos = Object.freeze({
       id: "farma-40-cristal",
       nombre: "Farma",
       volumen: 40,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -883,7 +883,7 @@ const CatalogoProductos = Object.freeze({
       id: "Licorera-50-cristal",
       nombre: "Licorera",
       volumen: 50,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -900,7 +900,7 @@ const CatalogoProductos = Object.freeze({
       id: "Oliva-45-cristal",
       nombre: "Oliva",
       volumen: 45,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_18,
         estandar: null,
@@ -917,7 +917,7 @@ const CatalogoProductos = Object.freeze({
       id: "Oval-60-cristal",
       nombre: "Oval",
       volumen: 60,
-      categorias: [CategoriaProducto.COSMETICO],
+      categorias: [CategoriaProducto.AMENIDADES],
       rosca: {
         diametro: CodigoRosca.ROSCA_20,
         estandar: null,
@@ -939,7 +939,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -953,7 +956,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -967,7 +973,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 125,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 351,
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -985,7 +994,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -999,7 +1011,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -1013,7 +1028,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Farma",
       volumen: 240,
       categorias: [CategoriaProducto.FARMACIA],
-      rosca: { diametro: CodigoRosca.ROSCA_24_410, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_24,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 180,
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -1273,6 +1291,20 @@ const CatalogoProductos = Object.freeze({
         alt: "tarro-1000-cristal",
       },
     },
+    {
+      id: "tarro-500-colores",
+      nombre: "Tarro",
+      volumen: 500,
+      categorias: [CategoriaProducto.TARROS],
+      rosca: { diametro: CodigoRosca.ROSCA_63, estandar: null },
+      piezasPorPaquete: 112,
+      color: ColorProducto.COLORES,
+      etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
+      img: {
+        src: "tarro_colores.jpg",
+        alt: "tarro-1000-Colores",
+      },
+    },
 
     // =========================
     // TAPA TARRO
@@ -1281,7 +1313,7 @@ const CatalogoProductos = Object.freeze({
       id: "tapa-tarro-r63",
       nombre: "Tapa Tarro",
       volumen: null,
-      categorias: [CategoriaProducto.TARROS],
+      categorias: [CategoriaProducto.TARROS, CategoriaProducto.COMPLEMENTOS],
       rosca: { diametro: CodigoRosca.ROSCA_63, estandar: null },
       piezasPorPaquete: null,
       color: ColorProducto.BLANCO,
@@ -1370,7 +1402,7 @@ const CatalogoProductos = Object.freeze({
       id: "tapa-vitrolero-r110",
       nombre: "Tapa Vitrolero",
       volumen: null,
-      categorias: [CategoriaProducto.TARROS],
+      categorias: [CategoriaProducto.TARROS, CategoriaProducto.COMPLEMENTOS],
       rosca: { diametro: CodigoRosca.ROSCA_110, estandar: null },
       piezasPorPaquete: null,
       color: ColorProducto.CRISTAL,
@@ -1564,7 +1596,7 @@ const CatalogoProductos = Object.freeze({
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],
       rosca: { diametro: CodigoRosca.ROSCA_24, estandar: null },
-      piezasPorPaquete: 600,
+      piezasPorPaquete: 2000,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
@@ -1576,7 +1608,7 @@ const CatalogoProductos = Object.freeze({
       id: "Sport-r-28",
       nombre: "Sport",
       volumen: null,
-      categorias: [CategoriaProducto.COMPLEMENTOS],
+      categorias: [CategoriaProducto.COMPLEMENTOS, CategoriaProducto.TARROS],
       rosca: { diametro: CodigoRosca.ROSCA_28, estandar: null },
       piezasPorPaquete: 2300,
       color: ColorProducto.BLANCO,
@@ -1634,7 +1666,10 @@ const CatalogoProductos = Object.freeze({
       nombre: "Flip Top",
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],
-      rosca: { diametro: CodigoRosca.ROSCA_18, estandar: null },
+      rosca: {
+        diametro: CodigoRosca.ROSCA_18,
+        estandar: RoscaEstandar.GPI_410,
+      },
       piezasPorPaquete: 1000,
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
@@ -1697,6 +1732,23 @@ const CatalogoProductos = Object.freeze({
     },
     {
       id: "Flip-Top-r-28-410",
+      nombre: "Flip Top",
+      volumen: null,
+      categorias: [CategoriaProducto.COMPLEMENTOS],
+      rosca: {
+        diametro: CodigoRosca.ROSCA_28,
+        estandar: RoscaEstandar.GPI_410,
+      },
+      piezasPorPaquete: 1000,
+      color: ColorProducto.BLANCO,
+      etiquetas: [EtiquetaProducto.STOCK],
+      img: {
+        src: "flip-flop-2.jpg",
+        alt: "Flip-Top-r-28-410",
+      },
+    },
+    {
+      id: "Flip-Top-r-28-410-29",
       nombre: "Flip Top",
       volumen: null,
       categorias: [CategoriaProducto.COMPLEMENTOS],
