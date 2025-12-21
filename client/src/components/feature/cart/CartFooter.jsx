@@ -13,6 +13,7 @@ export default function CartFooter() {
   const handleClickSolicitarCotizacion = () => {
     if (cart.length === 0) {
       setShowWarning(true);
+      setOpen(false);
       setTimeout(() => setShowWarning(false), 2500);
       return;
     }

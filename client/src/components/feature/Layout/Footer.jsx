@@ -34,11 +34,14 @@ export default function Footer() {
             <ul className="space-y-3 text-base text-gray-300">
               <li className="flex items-start gap-3 justify-center md:justify-start">
                 <LocationOnRoundedIcon fontSize="small" />
-                <span>Av. Principal 123, Col. Industrial, CDMX</span>
+                <span>
+                  Azafrán 380, Granjas México Iztacalco, CP 08400 Ciudad de
+                  México, CDMX
+                </span>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <LocalPhoneRoundedIcon fontSize="small" />
-                <span>+52 55 1234 5678</span>
+                <span>+5215576576045</span>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <MarkunreadRoundedIcon fontSize="small" />
