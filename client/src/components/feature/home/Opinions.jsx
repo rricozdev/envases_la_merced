@@ -1,6 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
+import martin from "../../../assets/testimonials/martin.png";
+import maria from "../../../assets/testimonials/maria.png";
+import elias from "../../../assets/testimonials/elias.png";
+import daniela from "../../../assets/testimonials/daniela.png";
+import ricardo from "../../../assets/testimonials/ricardo.png";
+
 import "swiper/css";
 import "swiper/css/autoplay";
 import Opinion from "./Opinion";
@@ -10,7 +16,7 @@ const opions = [
     author: {
       name: "Martin Zavala.",
       position: "",
-      avatar: "",
+      avatar: martin,
     },
     opinion:
       '"El servicio, variedad y calidad que tienen es muy bueno, sin duda seguire comprándoles. ¡Recomendados! "',
@@ -19,7 +25,7 @@ const opions = [
     author: {
       name: "María López",
       position: "",
-      avatar: "",
+      avatar: maria,
     },
     opinion:
       '"Entregan rápido y tienen buenas paqueterías con precios accesibles. La calidad de los envases es excelente. Muy recomendados."',
@@ -28,7 +34,7 @@ const opions = [
     author: {
       name: "Elías Campillo.",
       position: "",
-      avatar: "",
+      avatar: elias,
     },
     opinion:
       '"Empece comprandoles menudeo y ahora que he crecido me dieron precios especiales y ya puedo revender. Excelente atención y calidad."',
@@ -37,7 +43,7 @@ const opions = [
     author: {
       name: "Daniela Ortega.",
       position: "",
-      avatar: "",
+      avatar: daniela,
     },
     opinion:
       '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
@@ -46,16 +52,7 @@ const opions = [
     author: {
       name: "Ricardo Martinez",
       position: "",
-      avatar: "",
-    },
-    opinion:
-      '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
-  },
-  {
-    author: {
-      name: "María López",
-      position: "",
-      avatar: "",
+      avatar: ricardo,
     },
     opinion:
       '"La calidad de los envases es excepcional y el servicio al cliente es de primera. Siempre entregan a tiempo y nos ayudan a encontrar la solución perfecta para nuestros productos."',
