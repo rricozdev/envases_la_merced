@@ -62,7 +62,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/img-r28-sinfin--250.jpg",
+        src: "/img-r28-sinfin--250.png",
         alt: "sinfin-250-cristal",
       },
     },
@@ -79,7 +79,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/img-r28-sinfin-500.jpg",
+        src: "/img-r28-sinfin-500.png",
         alt: "sinfin-500-cristal",
       },
     },
@@ -96,7 +96,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/img-r28-sinfin-1000.jpg",
+        src: "/img-r28-sinfin-1000.png",
         alt: "sinfin-1000-cristal",
       },
     },
@@ -113,7 +113,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/img-r28-sinfin-1500.jpg",
+        src: "/img-r28-sinfin-1500.png",
         alt: "sinfin-1500-cristal",
       },
     },
@@ -130,7 +130,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/olas_rombo_r-28.jpg",
+        src: "/olas_rombo_r-28.png",
         alt: "olas-rombo-500-cristal",
       },
     },
@@ -147,7 +147,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/jubileo-r28-cristal.jpg",
+        src: "/jubileo-r28-cristal.png",
         alt: "jubileo-355-cristal",
       },
     },
@@ -166,7 +166,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "/tapa_cintillo-r-28.jpg",
+        src: "/tapa_cintillo-r-28.png",
         alt: "tapa-cintillo-rosca-28",
       },
     },
@@ -183,7 +183,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "/tapa-1.jpg",
+        src: "/tapa-1.png",
         alt: "refresquera-rosca-28",
       },
     },
@@ -202,7 +202,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/licorera-1000-500.jpg",
+        src: "/licorera-1000-500.png",
         alt: "licorera-1000-cristal",
       },
     },
@@ -219,7 +219,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "/licorera-1000-500.jpg",
+        src: "/licorera-1000-500.png",
         alt: "licorera-500-cristal",
       },
     },
@@ -236,7 +236,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/piñera-930.jpg",
+        src: "/piñera-930.png",
         alt: "piñera-930-cristal",
       },
     },
@@ -255,7 +255,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/agronomica-cristal.jpg",
+        src: "/agronomica-cristal.png",
         alt: "agroquimica-1000-cristal",
       },
     },
@@ -272,7 +272,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.HUMO,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "/agronomica-humo.jpg",
+        src: "/agronomica-humo.png",
         alt: "agroquimica-1000-humo",
       },
     },
@@ -289,7 +289,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/agronomica-ambar.jpg",
+        src: "/agronomica-ambar.png",
         alt: "agroquimica-1000-ambar",
       },
     },
@@ -306,7 +306,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "/lavatrastes-400.jpg",
+        src: "/lavatrastes-400.png",
         alt: "lavatrastes-400-cristal",
       },
     },
@@ -323,7 +323,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/lavatrastes-900.jpg",
+        src: "/lavatrastes-900.png",
         alt: "lavatrastes-900-cristal",
       },
     },
@@ -340,7 +340,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/lavatrastes-1300.jpg",
+        src: "/lavatrastes-1300.png",
         alt: "lavatrastes-1300-cristal",
       },
     },
@@ -357,7 +357,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/garrafa-4000.jpg",
+        src: "/garrafa-4000.png",
         alt: "garrafa-4000-cristal",
       },
     },
@@ -374,7 +374,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/garrafa-5000.jpg",
+        src: "/garrafa-5000.png",
         alt: "garrafa-5000-cristal",
       },
     },
@@ -391,7 +391,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/garrafa-10000.jpg",
+        src: "/garrafa-10000.png",
         alt: "garrafa-10000-cristal",
       },
     },
@@ -408,7 +408,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "/gatillera-250.jpg",
+        src: "/gatillera-250.png",
         alt: "gatillera-250-cristal",
       },
     },
@@ -425,7 +425,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/multiusos-2000.jpg",
+        src: "/multiusos-2000.png",
         alt: "multiusos-2000-cristal",
       },
     },
@@ -442,7 +442,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "trigger-500-cristal.jpg",
+        src: "trigger-500-cristal.png",
         alt: "trigger-500-cristal",
       },
     },
@@ -459,7 +459,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "trigger-500-blanco.jpg",
+        src: "trigger-500-blanco.png",
         alt: "trigger-500-blanco",
       },
     },
@@ -478,7 +478,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "boston-60.jpg",
+        src: "boston-60.png",
         alt: "boston-60-cristal",
       },
     },
@@ -495,7 +495,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "boston-250.jpg",
+        src: "boston-250-r415.png",
         alt: "boston-250-cristal",
       },
     },
@@ -512,7 +512,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "/boston-250-r415.jpg",
+        src: "/boston-250-r415.png",
         alt: "boston-250-2-cristal",
       },
     },
@@ -529,7 +529,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "boston-500.jpg",
+        src: "boston-500-sm.png",
         alt: "boston-500-cristal",
       },
     },
@@ -546,7 +546,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "boston-900.jpg",
+        src: "boston-900.png",
         alt: "boston-900-cristal",
       },
     },
@@ -563,7 +563,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "boston-900.jpg",
+        src: "boston-900.png",
         alt: "boston-1000-cristal",
       },
     },
@@ -582,7 +582,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "espciero-alto.jpg",
+        src: "espciero-alto.png",
         alt: "especiero-alto-120-cristal",
       },
     },
@@ -599,7 +599,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "espciero-corto.jpg",
+        src: "espciero-corto.png",
         alt: "especiero-corto-120-cristal",
       },
     },
@@ -618,7 +618,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "oval-60-125.jpg",
+        src: "oval-60-125.png",
         alt: "oval-60-cristal",
       },
     },
@@ -635,7 +635,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "oval-60-125.jpg",
+        src: "oval-60-125.png",
         alt: "oval-125-cristal",
       },
     },
@@ -652,7 +652,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "oval-60-125.jpg",
+        src: "oval-60-125.png",
         alt: "oval-250-cristal",
       },
     },
@@ -669,7 +669,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "silueta-125.jpg",
+        src: "silueta-125.png",
         alt: "silueta-125-cristal",
       },
     },
@@ -686,7 +686,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "silueta-500.jpg",
+        src: "silueta-500.png",
         alt: "silueta-500-cristal",
       },
     },
@@ -703,7 +703,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "campanita-500.jpg",
+        src: "campanita-60.png",
         alt: "campanita-500-cristal",
       },
     },
@@ -720,7 +720,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "campanita-60.jpg",
+        src: "campanita-500.png",
         alt: "campana-50-cristal",
       },
     },
@@ -737,7 +737,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "campana-500.jpg",
+        src: "campana-500.png",
         alt: "campana-500-cristal",
       },
     },
@@ -754,7 +754,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "camapana-250.jpg",
+        src: "camapana-250.png",
         alt: "campana-250-cristal",
       },
     },
@@ -773,7 +773,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "lapiz-25.jpg",
+        src: "lapiz-25.png",
         alt: "lapiz-25-cristal",
       },
     },
@@ -790,7 +790,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "invertidad-30.jpg",
+        src: "invertidad-30.png",
         alt: "invertida-30-cristal",
       },
     },
@@ -807,7 +807,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "institucional.jpg",
+        src: "institucional.png",
         alt: "institucional-30-cristal",
       },
     },
@@ -824,7 +824,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "cilindrica.jpg",
+        src: "cilindrica.png",
         alt: "cilindrica-30-cristal",
       },
     },
@@ -841,7 +841,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "cilindrica.jpg",
+        src: "cilindrica.png",
         alt: "cilindrica-40-cristal",
       },
     },
@@ -858,7 +858,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "cubo-40.jpg",
+        src: "cubo-40.png",
         alt: "cubo-40-cristal",
       },
     },
@@ -875,25 +875,8 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "farma-40.jpg",
+        src: "farma-40.png",
         alt: "farma-40-cristal",
-      },
-    },
-    {
-      id: "Licorera-50-cristal",
-      nombre: "Licorera",
-      volumen: 50,
-      categorias: [CategoriaProducto.AMENIDADES],
-      rosca: {
-        diametro: CodigoRosca.ROSCA_18,
-        estandar: null,
-      },
-      piezasPorPaquete: 800,
-      color: ColorProducto.CRISTAL,
-      etiquetas: [EtiquetaProducto.PEDIDO],
-      img: {
-        src: "licorera.jpg",
-        alt: "Licorera-50-cristal",
       },
     },
     {
@@ -909,7 +892,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "oliva-45.jpg",
+        src: "oliva-45.png",
         alt: "Oliva-45-cristal",
       },
     },
@@ -926,7 +909,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "oval-60-125.jpg",
+        src: "oval-60-125.png",
         alt: "Oval-60-cristal",
       },
     },
@@ -947,7 +930,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-240-24.jpg",
+        src: "farma-240-24.png",
         alt: "farma-125-cristal",
       },
     },
@@ -964,7 +947,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-125-blanco.jpg",
+        src: "farma-125-blanco.png",
         alt: "farma-125-blanco",
       },
     },
@@ -981,7 +964,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-125-ambar.jpg",
+        src: "farma-125-ambar.png",
         alt: "farma-125-ambar",
       },
     },
@@ -1002,7 +985,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-240-24.jpg",
+        src: "farma-240-24.png",
         alt: "farma-240-cristal",
       },
     },
@@ -1019,7 +1002,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-125-blanco.jpg",
+        src: "farma-125-blanco.png",
         alt: "farma-240-blanco",
       },
     },
@@ -1036,7 +1019,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "farma-125-ambar.jpg",
+        src: "farma-125-ambar.png",
         alt: "farma-240-ambar",
       },
     },
@@ -1054,7 +1037,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "pastillero-110.jpg",
+        src: "pastillero-110.png",
         alt: "pastillero-110-cristal",
       },
     },
@@ -1068,7 +1051,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "pastillero-110-blanco.jpg",
+        src: "pastillero-110-blanco.png",
         alt: "pastillero-110-blanco",
       },
     },
@@ -1082,7 +1065,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "pastillero-110-ambar.jpg",
+        src: "pastillero-110-ambar.png",
         alt: "pastillero-110-ambar",
       },
     },
@@ -1096,7 +1079,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AZUL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "pastillero-110-azul.jpg",
+        src: "pastillero-110-azul.png",
         alt: "pastillero-110-azul",
       },
     },
@@ -1110,7 +1093,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMARILLO,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "pastillero-110-amarillo.jpg",
+        src: "pastillero-110-amarillo.png",
         alt: "pastillero-110-amarillo",
       },
     },
@@ -1128,7 +1111,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "pastillero-150-cristal.jpg",
+        src: "pastillero-150-cristal.png",
         alt: "pastillero-150-cristal",
       },
     },
@@ -1142,7 +1125,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "pastillero-150-blanco.jpg",
+        src: "pastillero-150-blanco.png",
         alt: "pastillero-150-blanco",
       },
     },
@@ -1156,7 +1139,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMBAR,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "pastillero-150-ambar.jpg",
+        src: "pastillero-150-ambar.png",
         alt: "pastillero-150-ambar",
       },
     },
@@ -1170,7 +1153,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AZUL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "pastillero-150-azul.jpg",
+        src: "pastillero-150-azul.png",
         alt: "pastillero-150-azul",
       },
     },
@@ -1184,7 +1167,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AMARILLO,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "pastillero-150-amarillo.jpg",
+        src: "pastillero-150-amarillo.png",
         alt: "pastillero-150-amarillo",
       },
     },
@@ -1205,7 +1188,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa_inviolable.jpg",
+        src: "tapa_inviolable.png",
         alt: "tapa-inviolable-r24",
       },
     },
@@ -1219,7 +1202,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa-children.jpg",
+        src: "tapa-children.png",
         alt: "tapa-children-r38",
       },
     },
@@ -1233,7 +1216,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa-ciega.jpg",
+        src: "tapa-ciega.png",
         alt: "tapa-Ciega-r38",
       },
     },
@@ -1251,7 +1234,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tarro_250.jpg",
+        src: "tarro_250.png",
         alt: "tarro-250-cristal",
       },
     },
@@ -1269,7 +1252,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tarro_500.jpg",
+        src: "tarro_500.png",
         alt: "tarro-500-cristal",
       },
     },
@@ -1287,7 +1270,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tarro_1000_.jpg",
+        src: "tarro_1000_.png",
         alt: "tarro-1000-cristal",
       },
     },
@@ -1301,7 +1284,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.PERSONALIZADO],
       img: {
-        src: "tarro_colores.jpg",
+        src: "tarro_colores.png",
         alt: "tarro-1000-Colores",
       },
     },
@@ -1319,7 +1302,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "Tapa_Tarro_.jpg",
+        src: "Tapa_Tarro_.png",
         alt: "tapa-tarro-r63",
       },
     },
@@ -1336,7 +1319,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "vitrilero_cuadrado.jpg",
+        src: "vitrilero_cuadrado.png",
         alt: "vitrolero-cuadrado-2k",
       },
     },
@@ -1354,7 +1337,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "vitrilero_1000.jpg",
+        src: "vitrilero_1000.png",
         alt: "vitrolero-1k",
       },
     },
@@ -1372,7 +1355,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "vitrilero_1_2_galon.jpg",
+        src: "vitrilero_1_2_galon.png",
         alt: "vitrolero-medio-galon",
       },
     },
@@ -1390,7 +1373,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "vitrilero_1_galon.jpg",
+        src: "vitrilero_1_galon.png",
         alt: "vitrolero-1-galon",
       },
     },
@@ -1408,7 +1391,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa_vitrilero.jpg",
+        src: "tapa_vitrilero.png",
         alt: "tapa-vitrolero-r110",
       },
     },
@@ -1425,7 +1408,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "cilindro_colores.jpg",
+        src: "cilindro_colores.png",
         alt: "Cilindro-1000-colores",
       },
     },
@@ -1442,7 +1425,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "trigger_economico.jpg",
+        src: "trigger_economico.png",
         alt: "Trigger-Economico-r-28",
       },
     },
@@ -1456,7 +1439,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.CRISTAL,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "trigger-industrial.jpg",
+        src: "trigger-industrial.png",
         alt: "Trigger-Industrial-r-28",
       },
     },
@@ -1471,7 +1454,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "Trigger-cola-de-pato.jpg",
+        src: "Trigger-cola-de-pato.png",
         alt: "Trigger-Cola-Pato-r-28",
       },
     },
@@ -1485,7 +1468,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "mini-trigger-28.jpg",
+        src: "mini-trigger-28.png",
         alt: "Trigger-Mini-28",
       },
     },
@@ -1500,7 +1483,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "mini-trigger-24.jpg",
+        src: "mini-trigger-24.png",
         alt: "Trigger-Mini-24",
       },
     },
@@ -1514,7 +1497,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "atomizador-boston.jpg",
+        src: "atomizaro_boston_1.png",
         alt: "Atomizador-Boston-18",
       },
     },
@@ -1528,7 +1511,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "atomizador-boston.jpg",
+        src: "atomizaro_boston_1.png",
         alt: "Atomizador-Boston-20",
       },
     },
@@ -1542,7 +1525,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "atomizador-boston.jpg",
+        src: "atomizaro_boston_1.png",
         alt: "Atomizador-Boston-24",
       },
     },
@@ -1556,7 +1539,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "atomizador-boston.jpg",
+        src: "atomizaro_boston_1.png",
         alt: "Atomizador-Boston-28",
       },
     },
@@ -1571,7 +1554,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "bomba-dosificadora.jpg",
+        src: "bomba-dosificadora.png",
         alt: "Bomba-Dosificadora-28",
       },
     },
@@ -1585,7 +1568,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.AZUL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "bomba-dosificadora-reforzada.jpg",
+        src: "bomba-dosificadora-reforzada.png",
         alt: "Bomba-Dosificadora-28-A",
       },
     },
@@ -1600,7 +1583,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "bomba-dosificadora.jpg",
+        src: "bomba-dosificadora.png",
         alt: "Bomba-Dosificadora-24-A",
       },
     },
@@ -1614,7 +1597,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "tapa-sport.jpg",
+        src: "tapa-sport.png",
         alt: "Sport-r-28",
       },
     },
@@ -1628,7 +1611,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "tapa_sport.jpg",
+        src: "tapa_sport.png",
         alt: "Sport-r-63",
       },
     },
@@ -1643,7 +1626,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.COLORES,
       etiquetas: [EtiquetaProducto.STOCK, EtiquetaProducto.MULTICOLOR],
       img: {
-        src: "tapa-ciega-p.jpg",
+        src: "tapa-ciega-p.png",
         alt: "Sport-Tapa-Ciega-r-18",
       },
     },
@@ -1657,7 +1640,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "tapa-doble-pared.jpg",
+        src: "tapa-doble-pared.png",
         alt: "doble-pared-r-18",
       },
     },
@@ -1674,7 +1657,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-1.jpg",
+        src: "flip-flop-1.png",
         alt: "Flip-Top-r-18",
       },
     },
@@ -1692,7 +1675,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-2.jpg",
+        src: "flip-flop-2.png",
         alt: "Flip-Top-r-20",
       },
     },
@@ -1709,7 +1692,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-3.jpg",
+        src: "flip-flop-3.png",
         alt: "Flip-Top-r-24-410",
       },
     },
@@ -1726,7 +1709,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-2.jpg",
+        src: "flip-flop-2.png",
         alt: "Flip-Top-r-24-415",
       },
     },
@@ -1743,7 +1726,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-2.jpg",
+        src: "flip-flop-2.png",
         alt: "Flip-Top-r-28-410",
       },
     },
@@ -1760,7 +1743,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.NATURAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "flip-flop-natural.jpg",
+        src: "flip-flop-natural.png",
         alt: "Flip-Top-r-28-410",
       },
     },
@@ -1777,7 +1760,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.BLANCO,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa-disk-top.jpg",
+        src: "tapa-disk-top.png",
         alt: "Tapa-Disk-Top-r-24-415",
       },
     },
@@ -1794,7 +1777,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.NATURAL,
       etiquetas: [EtiquetaProducto.PEDIDO],
       img: {
-        src: "disk-top-sup.jpg",
+        src: "disk-top-sup.png",
         alt: "Tapa-Disk-Top-r-20-410",
       },
     },
@@ -1811,7 +1794,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.NATURAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "disk-top-sup.jpg",
+        src: "disk-top-sup.png",
         alt: "Tapa-Disk-Top-r-28-415",
       },
     },
@@ -1828,7 +1811,7 @@ const CatalogoProductos = Object.freeze({
       color: ColorProducto.NATURAL,
       etiquetas: [EtiquetaProducto.STOCK],
       img: {
-        src: "tapa-disk-top.jpg",
+        src: "tapa-disk-top.png",
         alt: "Tapa-Disk-Top-r-28-410",
       },
     },

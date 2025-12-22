@@ -5,38 +5,35 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 export default function ProductCard({ product, onQuote }) {
   const etiquetaStyles = {
     [EtiquetaProducto.STOCK]: "bg-emerald-500/90 text-white",
-
     [EtiquetaProducto.PEDIDO]: "bg-amber-500/90 text-white",
-
     [EtiquetaProducto.MULTICOLOR]:
       "bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 text-white",
-
     [EtiquetaProducto.PERSONALIZADO]:
       "bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white",
   };
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200/60 dark:border-white/10 bg-white dark:bg-bgdark-secondary shadow-sm hover:shadow-lg transition-all duration-300">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10 bg-white dark:bg-bgdark-secondary shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       {/* Imagen */}
-      <div className="relative h-52 bg-white overflow-hidden p-3">
+      <div className="relative h-52 bg-slate-50 flex items-center justify-center">
         <img
           src={product.img.src ?? "/images/placeholder-product.webp"}
           alt={`${product.nombre} ${product.volumen}ml ${product.color}`}
-          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+          className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
+      </div>
 
-        {/* Etiquetas */}
-        <div className="absolute top-3 right-3 flex flex-col-reverse items-end gap-2 z-10">
+      {/* Etiquetas (ya NO sobre la imagen) */}
+      {product.etiquetas?.length > 0 && (
+        <div className="flex flex-wrap gap-2 px-5 pt-3">
           {product.etiquetas.map((etiqueta) => (
             <span
               key={etiqueta}
               className={`
-                inline-flex items-center whitespace-nowrap
-                text-[10px] uppercase tracking-wider font-semibold
-                px-2.5 py-1 rounded-md
-                shadow-sm backdrop-blur-md
-                border border-black/5
+                inline-flex items-center
+                text-[11px] uppercase tracking-wide font-semibold
+                px-3 py-1 rounded-full
                 ${etiquetaStyles[etiqueta]}
               `}
             >
@@ -44,12 +41,12 @@ export default function ProductCard({ product, onQuote }) {
             </span>
           ))}
         </div>
-      </div>
+      )}
 
       {/* Contenido */}
-      <div className="flex flex-col flex-1 p-5">
+      <div className="flex flex-col flex-1 p-5 pt-4">
         {/* Título */}
-        <h3 className="text-base font-semibold text-text-light dark:text-text-dark leading-tight mb-1">
+        <h3 className="text-base font-semibold text-text-light dark:text-text-dark leading-snug mb-2">
           {product.nombre}
           {product.volumen && (
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -81,7 +78,7 @@ export default function ProductCard({ product, onQuote }) {
           {product.categorias.map((cat) => (
             <span
               key={cat}
-              className="text-[11px] px-2 py-1 rounded-full bg-gray-100 dark:bg-bgdark-main text-gray-600 dark:text-gray-400"
+              className="text-[11px] px-3 py-1 rounded-full bg-gray-100 dark:bg-bgdark-main text-gray-600 dark:text-gray-400"
             >
               {cat}
             </span>
