@@ -45,7 +45,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <MarkunreadRoundedIcon fontSize="small" />
-                <span>contacto@envaseslamerced.com</span>
+                <span>grangas@envaseslamerced.mx</span>
               </li>
             </ul>
           </address>
