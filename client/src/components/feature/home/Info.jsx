@@ -10,8 +10,10 @@ export default function Info() {
             Qué hacemos
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-lg text-txtligth-secondary dark:text-txtdark-secondary">
-            Ofrecemos un servicio integral que cubre todas sus necesidades de
-            envasado, desde la concepción hasta la entrega.
+            Nos dedicamos a surtir envases y tapas de plástico para el día a día
+            del negocio. Desde al tianguis hasta las fabricas, apoyamos a
+            comerciantes y productores con buen precio, buen trato y producto
+            disponible siempre cerca de ti.
           </p>
         </header>
 

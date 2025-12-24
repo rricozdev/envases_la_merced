@@ -1,36 +1,35 @@
+import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const cardsInfo = [
   {
     id: 1,
-    title: "Venta de envases",
+    title: "Venta",
     description:
-      "Ofrecemos una amplia gama de envases, diseñados para satisfacer las necesidades específicas de su industria",
+      "Ofrecemos una amplia gama de envases y complementos, diseñados para satisfacer tus necesidades.",
     icon: ShoppingBagIcon,
   },
   {
     id: 2,
     title: "Producción",
-    description:
-      "Fabricamos envases con los más altos estándares de calidad y materiales duraderos.",
+    description: "Fabricamos envases con los más altos estándares de calidad.",
     icon: PrecisionManufacturingIcon,
   },
   {
     id: 3,
     title: "Distribución",
     description:
-      "Contamos con una red logística eficiente para entregar sus productos a tiempo y en perfecto estado.",
+      "Contamos con varias ubicaciones y una red logística eficiente para entregar nuestros productos para tu mayor comodidad.",
     icon: LocalShippingIcon,
   },
   {
     id: 4,
-    title: "Asesoría técnica",
+    title: "Linea de productos.",
     description:
-      "Nuestro equipo de expertos le brinda la mejor asesoría para su proyecto de envasado",
-    icon: SupportAgentIcon,
+      "Agua, limpieza ,cosmeticos,farmaceuticos , Alimentos, amenidades hoteleras, Vitroleros, Promocionales",
+    icon: ChecklistRoundedIcon,
   },
 ];
 
