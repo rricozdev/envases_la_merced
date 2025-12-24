@@ -57,7 +57,7 @@ export default function CartItem({ item }) {
         <div className="flex items-start justify-between gap-3">
           <div className="flex flex-col">
             <h3 className="text-base font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2 ">
-              {item.nombre} {item.volumen && `- ${item.volumen}ml`}
+              {item.nombre} {item.volumen && `- ${item.volumen}${item.unidad}`}
             </h3>
             <p>
               {item.piezasPorPaquete && `${item.piezasPorPaquete} PZS/PAQ `}
