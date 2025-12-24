@@ -4,7 +4,7 @@ export function messageWhasapSchemaCartProduct(products) {
   products.forEach((product, index) => {
     msg += `
     *${index + 1}. ${product.nombre}* ${
-      product.volumen ? ` · ${product.volumen} ml` : ""
+      product.volumen ? ` · ${product.volumen}${product.unidad}` : ""
     }
      ${
        product.piezasPorPaquete

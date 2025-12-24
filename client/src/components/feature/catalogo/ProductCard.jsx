@@ -51,7 +51,7 @@ export default function ProductCard({ product, onQuote }) {
           {product.volumen && (
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
               {" "}
-              · {product.volumen} ml
+              · {product.volumen} {product.unidad}
             </span>
           )}
         </h3>
