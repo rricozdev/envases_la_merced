@@ -46,6 +46,13 @@ const ColorProducto = Object.freeze({
   NATURAL: "Natural",
 });
 
+// Se agrega unidades de medida estándar utilizadas para volumen o capacidad de los productos
+const UnidadesDeMedida = Object.freeze({
+  LITRO: "lt",
+  GALON: "gal",
+  KILOGRAMO: "kgrs",
+});
+
 const CatalogoProductos = Object.freeze({
   productos: Object.freeze([
     // * AGUAS Y JUGOS
