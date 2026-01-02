@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-center md:justify-between items-center text-center md:text-left gap-4">
             <p className="text-sm text-gray-300">
-              © 2024 Envases La Merced. Todos los derechos reservados.
+              © 2026 Envases La Merced. Todos los derechos reservados.
             </p>
           </div>
         </div>
