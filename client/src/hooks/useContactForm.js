@@ -33,9 +33,6 @@ export default function useContactForm() {
       to_email,
     };
 
-    // 🔍 Debug claro
-    console.log("Payload enviado a EmailJS:", payload);
-
     try {
       await sendContactEmail(payload);
 
