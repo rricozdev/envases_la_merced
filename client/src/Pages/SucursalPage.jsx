@@ -4,6 +4,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EventAvailableRoundedIcon from "@mui/icons-material/EventAvailableRounded";
+import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 
 import { useParams } from "react-router-dom";
 import { sucursalesData } from "../utils/constants/sucursales";
@@ -40,11 +41,11 @@ const SucursalPage = () => {
           nosotros.
         </p>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-5 gap-6 mb-10">
+        {/* GRID PRINCIPAL */}
+        <div className="grid md:grid-cols-5 gap-6 mb-10 items-stretch md:h-[600px]">
           {/* Mapa */}
-          <div className="md:col-span-3">
-            <div className="w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-md dark:shadow-none">
+          <div className="md:col-span-3 h-full">
+            <div className="w-full h-full rounded-xl overflow-hidden shadow-md dark:shadow-none">
               <iframe
                 src={sucursal.mapUrl}
                 className="w-full h-full border-0"
@@ -54,8 +55,8 @@ const SucursalPage = () => {
             </div>
           </div>
 
-          {/* Info */}
-          <div className="md:col-span-2 bg-white dark:bg-bgdark-secondary p-6 rounded-xl shadow-md dark:shadow-none border border-gray-200 dark:border-transparent space-y-6">
+          {/* Panel de información */}
+          <div className="md:col-span-2 h-full bg-white dark:bg-bgdark-secondary p-6 rounded-xl shadow-md dark:shadow-none border border-gray-200 dark:border-transparent space-y-6">
             {/* Dirección */}
             <div className="flex items-start gap-3">
               <LocationOnRoundedIcon className={iconColorClass} />
@@ -108,9 +109,25 @@ const SucursalPage = () => {
                   href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${iconColorClass} font-medium hover:underline`}
+                  className="text-gray-600 dark:text-txtdark-secondary hover:underline"
                 >
                   {sucursal.whatsapp}
+                </a>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-3">
+              <EmailRoundedIcon className={iconColorClass} />
+              <div>
+                <h3 className="text-lg font-bold text-corporate-blue dark:text-txtdark-brand-primary">
+                  Email
+                </h3>
+                <a
+                  href={`mailto:${sucursal.email}`}
+                  className="text-gray-600 dark:text-txtdark-secondary hover:underline"
+                >
+                  {sucursal.email}
                 </a>
               </div>
             </div>
@@ -126,7 +143,7 @@ const SucursalPage = () => {
                   href={sucursal.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${iconColorClass} hover:underline`}
+                  className="text-gray-600 dark:text-txtdark-secondary hover:underline"
                 >
                   {sucursal.facebook}
                 </a>
@@ -141,32 +158,27 @@ const SucursalPage = () => {
             ¿Listo para comenzar tu proyecto?
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            {/* Agendar visita */}
-            <Button
-              type="primary"
-              variant="solid"
-              size="md"
-              fullWidth
-              icon={<EventAvailableRoundedIcon />}
-              iconPosition="left"
-              className="sm:w-auto"
-              onClick={() =>
-                window.open(
-                  `https://wa.me/${sucursal.whatsapp.replace(
-                    /\D/g,
-                    ""
-                  )}?text=${encodeURIComponent(
-                    `Hola, quiero agendar una visita a la sucursal ${sucursal.name}.`
-                  )}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              Agendar visita
-            </Button>
-          </div>
+          <Button
+            type="primary"
+            variant="solid"
+            size="md"
+            icon={<EventAvailableRoundedIcon />}
+            iconPosition="left"
+            onClick={() =>
+              window.open(
+                `https://wa.me/${sucursal.whatsapp.replace(
+                  /\D/g,
+                  ""
+                )}?text=${encodeURIComponent(
+                  `Hola, quiero agendar una visita a la sucursal ${sucursal.name}.`
+                )}`,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            Agendar visita
+          </Button>
         </div>
       </div>
     </div>
