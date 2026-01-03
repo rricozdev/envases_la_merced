@@ -16,24 +16,33 @@ export default function useContactForm() {
   });
 
   const onSubmit = async (data) => {
-    // Determinar la sucursal seleccionada o default a CDMX
+    // Sucursal seleccionada o default
     const branchKey = data.sucursal?.toUpperCase() || "CDMX";
+
     const to_email =
-      BRANCH_PHONES[branchKey]?.sendEmail[0] ||
-      BRANCH_PHONES[branchKey]?.email[0];
+      BRANCH_PHONES[branchKey]?.sendEmail?.[0] ||
+      BRANCH_PHONES[branchKey]?.email?.[0];
+
+    const payload = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      company: data.company,
+      message: data.message,
+      branch: branchKey,
+      to_email,
+    };
+
+    // 🔍 Debug claro
+    console.log("Payload enviado a EmailJS:", payload);
 
     try {
-      await sendContactEmail({
-        name: data.name,
-        email: data.email,
-        message: data.message,
-        to_email,
-      });
+      await sendContactEmail(payload);
 
       toast.success("Mensaje enviado correctamente ✅");
       reset();
     } catch (error) {
-      console.error(error);
+      console.error("Error enviando contacto:", error);
       toast.error("Error al enviar el mensaje ❌");
     }
   };

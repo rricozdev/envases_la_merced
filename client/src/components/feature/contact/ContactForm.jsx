@@ -6,38 +6,31 @@ import Textarea from "../../UI/form/Textarea";
 import { BRANCH_PHONES } from "../../../utils/constants/branchPhones";
 
 export default function ContactForm() {
-  // 1️⃣ Hook de formulario
+  // Hook de formulario
   const { register, handleSubmit, errors, isSubmitting, onSubmit } =
     useContactForm();
 
-  // 2️⃣ Estado para modal y sucursal seleccionada
+  // Estado UI
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState("CDMX");
 
   return (
-    <section
-      className="lg:col-span-3 bg-white dark:bg-[#1a2a38] p-6 sm:p-8 rounded-xl shadow-sm"
-      aria-labelledby="contact-form-title"
-    >
-      <h2
-        id="contact-form-title"
-        className="text-2xl font-bold text-secondary dark:text-dark-text pb-4"
-      >
+    <section className="lg:col-span-3 bg-white dark:bg-[#1a2a38] p-6 sm:p-8 rounded-xl shadow-sm">
+      <h2 className="text-2xl font-bold text-secondary dark:text-dark-text pb-4">
         Envíenos su consulta
       </h2>
 
-      {/* 3️⃣ Formulario */}
       <form
         className="flex flex-col gap-6"
         onSubmit={handleSubmit((data) =>
-          onSubmit({ ...data, sucursal: selectedBranch })
+          onSubmit({
+            ...data,
+            branch: selectedBranch, // 🔴 CLAVE
+          })
         )}
         noValidate
       >
         <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <legend className="sr-only">Información de contacto</legend>
-
-          {/* 4️⃣ Inputs */}
           <Input
             label="Nombre"
             placeholder="Su nombre completo"
@@ -68,7 +61,6 @@ export default function ContactForm() {
           />
         </fieldset>
 
-        {/* 5️⃣ Textarea */}
         <Textarea
           label="Mensaje"
           placeholder="Escriba aquí su consulta..."
@@ -76,7 +68,7 @@ export default function ContactForm() {
           error={errors.message?.message}
         />
 
-        {/* 6️⃣ Botón para abrir modal de sucursal */}
+        {/* Selector de sucursal */}
         <div>
           <Button
             type="primary"
@@ -87,33 +79,28 @@ export default function ContactForm() {
             Sucursal: {selectedBranch}
           </Button>
 
-          {/* 7️⃣ Modal */}
           {modalOpen && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
               <div className="bg-white dark:bg-[#1a2a38] p-6 rounded-lg shadow-lg flex flex-col gap-4">
                 <h3 className="text-lg font-bold">Seleccione la sucursal</h3>
 
-                {/* 8️⃣ Listado de sucursales */}
                 {Object.keys(BRANCH_PHONES).map((branch) => (
                   <Button
                     key={branch}
-                    type="primary"
-                    variant={branch === selectedBranch ? "solid" : "outline"} // Diferenciar visualmente
                     HtmlType="button"
+                    variant={branch === selectedBranch ? "solid" : "outline"}
                     onClick={() => {
-                      setSelectedBranch(branch); // Actualiza sucursal
-                      setModalOpen(false); // Cierra modal
+                      setSelectedBranch(branch);
+                      setModalOpen(false);
                     }}
                   >
                     {branch}
                   </Button>
                 ))}
 
-                {/* 9️⃣ Botón cancelar */}
                 <Button
-                  type="secondary"
-                  variant="solid"
                   HtmlType="button"
+                  variant="ghost"
                   onClick={() => setModalOpen(false)}
                 >
                   Cancelar
@@ -123,9 +110,8 @@ export default function ContactForm() {
           )}
         </div>
 
-        {/* 10️⃣ Footer con aviso de privacidad y submit */}
         <div className="flex flex-col sm:flex-row justify-between gap-4 pt-2">
-          <p className="text-x text-[#617589] dark:text-[#a0b1c2] max-w-md">
+          <p className="text-xs text-[#617589] dark:text-[#a0b1c2] max-w-md">
             Sus datos serán tratados con confidencialidad. Nunca compartiremos
             su información.
           </p>
