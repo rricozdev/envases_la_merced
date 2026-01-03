@@ -50,8 +50,12 @@ export default function Header() {
                   alt="logo envaces la merced"
                 />
               </div>
-              <h1 className="text-txtligth-primary dark:text-txtdark-primary text-xl font-bold hidden sm:block">
-                Envases La Merced
+
+              <h1 className="text-xl font-bold hidden sm:block">
+                <span className="text-txtligth-primary dark:text-txtdark-primary">
+                  Envases{" "}
+                </span>
+                <span className="text-brand-accent">La Merced</span>
               </h1>
             </Link>
           </div>
