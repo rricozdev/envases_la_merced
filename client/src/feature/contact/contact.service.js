@@ -32,6 +32,10 @@ export const sendContactEmail = async ({
   };
 
   try {
+    console.log(
+      "Enviando email con los siguientes parámetros:",
+      templateParams
+    );
     return await emailjs.send(
       "service_qbqsolr", // Service ID
       "template_fnjow19", // Template ID
