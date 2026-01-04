@@ -23,7 +23,7 @@ export default function About() {
       </div>
       {/* ¿Quiénes somos? */}
       <ImageTextSection
-        imageSrc="about_quienes_somos.jpeg"
+        imageSrc="about_quienes_somos.webp"
         imageAlt="Banner con productos de envases PET"
         title="¿Quiénes somos?"
         description={`Envases La Merced nació en el año 2021 como una empresa dedicada a la distribución de envases PET, con un objetivo claro: acercar productos de calidad directamente desde fábrica a nuestros clientes, de forma accesible, práctica y confiable.

@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-import martin from "../../../assets/testimonials/martin.png";
-import maria from "../../../assets/testimonials/maria.png";
-import elias from "../../../assets/testimonials/elias.png";
-import daniela from "../../../assets/testimonials/daniela.png";
-import ricardo from "../../../assets/testimonials/ricardo.png";
+import martin from "../../../assets/testimonials/martin.webp";
+import maria from "../../../assets/testimonials/maria.webp";
+import elias from "../../../assets/testimonials/elias.webp";
+import daniela from "../../../assets/testimonials/daniela.webp";
+import ricardo from "../../../assets/testimonials/ricardo.webp";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -79,10 +79,10 @@ export default function Opinions() {
           spaceBetween={20}
           loop={true}
           modules={[Autoplay]}
-          speed={5000}
+          speed={3000}
           freeMode={true}
           autoplay={{
-            delay: 0,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           breakpoints={{

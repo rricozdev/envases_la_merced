@@ -43,11 +43,15 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w- h-10 text-primary shrink-0">
+              <div className="w-[110px] h-10 text-primary shrink-0">
                 <img
-                  className="w-full h-full object-contain"
-                  src={isDark ? "/logo_dark_mode.png" : "logo_light_mode.png"}
-                  alt="logo envaces la merced"
+                  src={
+                    isDark ? "/logo_dark_mode.webp" : "/logo_light_mode.webp"
+                  }
+                  alt="Logo Envases La Merced"
+                  width="110"
+                  height="40"
+                  className="object-contain"
                 />
               </div>
 

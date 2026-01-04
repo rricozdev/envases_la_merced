@@ -21,7 +21,12 @@ export default function Info() {
         {/* Tarjetas de información */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {cardsInfo.map((card) => (
-            <CardHome card={card} size={card.size} color={card.color} />
+            <CardHome
+              key={card.id}
+              card={card}
+              size={card.size}
+              color={card.color}
+            />
           ))}
         </div>
       </div>
