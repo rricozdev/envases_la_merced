@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 import ScrollToTop from "../../../routes/ScrollTop.jsx";
 import CartDrawer from "../cart/CartDrawer";
 import Header from "./Header";
 import Footer from "./Footer";
 import Loader from "../../UI/Loader.jsx";
-import Chat from "../chat/ChatbotAssistant.jsx";
+
+const Chat = lazy(() => import("../chat/ChatbotAssistant.jsx"));
 
 export default function Layout() {
   return (
@@ -20,7 +21,9 @@ export default function Layout() {
         </Suspense>
 
         <CartDrawer />
-        <Chat />
+        <Suspense fallback={null}>
+          <Chat />
+        </Suspense>
       </main>
 
       <Footer />

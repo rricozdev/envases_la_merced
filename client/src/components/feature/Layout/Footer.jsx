@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="w-20  text-brand-accent shrink-0">
                 <img
                   className="w-full h-full object-contain"
-                  src="/logo_dark_mode.png"
+                  src="/logo_dark_mode.webp"
                   alt="Logo de Envases La Merced"
                 />
               </div>

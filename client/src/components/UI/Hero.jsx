@@ -18,9 +18,12 @@ export default function Hero({
   return (
     <section className={`relative overflow-hidden ${heroTypes[type]}`}>
       {/* Imagen de fondo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${srcImg}')` }}
+      <img
+        src={srcImg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high"
+        decoding="async"
       />
 
       {/* Overlay */}
