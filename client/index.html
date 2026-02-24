@@ -1,46 +1,219 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
-    <!-- Favicon -->
-    <link rel="icon" href="/logo_dark_mode.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/logo_dark_mode.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W4JS5W3L");
+    </script>
+    <!-- End Google Tag Manager -->
 
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="Envases La Merced" />
-    <meta
-      property="og:title"
-      content="Envases La Merced — Envases PET y soluciones de envasado"
-    />
-    <meta
-      property="og:description"
-      content="Distribuimos soluciones prácticas en envases PET para negocios de todos los tamaños. Solicita cotización y conoce nuestra gama de productos."
-    />
-    <meta property="og:image" content="/1000156628.jpeg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://envases-lamerced.mx" />
+    <!-- ════════════════════════════════════════
+         VIEWPORT & COMPATIBILIDAD
+    ════════════════════════════════════════ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-language" content="es-MX" />
 
-    <!-- Meta SEO -->
+    <!-- ════════════════════════════════════════
+         TITLE — Keyword principal + CTA
+         Target: "envases PET mayoreo México"
+         55-60 chars para evitar truncamiento en Google
+    ════════════════════════════════════════ -->
+    <title>
+      Envases PET al Mayoreo en México — Cotiza Hoy | Envases La Merced
+    </title>
+
+    <!-- ════════════════════════════════════════
+         META SEO CORE
+    ════════════════════════════════════════ -->
+    <meta name="author" content="Envases La Merced" />
+
+    <!--
+      DESCRIPTION: 150-160 chars ideales.
+      Incluye: keyword principal, beneficios (variedad, sectores, precio competitivo), CTA.
+    -->
     <meta
       name="description"
-      content="Envases La Merced — Envases PET y soluciones de envasado. Productos para alimentos, cosmética y limpieza. Solicita tu cotización."
+      content="Distribuidor de envases PET al mayoreo en México. Botellas, frascos y tapas para alimentos, cosméticos y limpieza. Amplio catálogo, precios competitivos y envío a todo México. ¡Solicita tu cotización hoy!"
     />
+
+    <!--
+      KEYWORDS REFINADAS: Combinación de head terms (volumen alto),
+      long-tail (intención de compra alta) e identidad de marca.
+    -->
     <meta
       name="keywords"
-      content="envases, PET, botellas, frascos, envases alimentarios, envases cosmética, cotización"
+      content="envases PET mayoreo México, botellas PET al mayoreo, frascos plástico para cosméticos, envases grado alimenticio México, proveedores envases PET CDMX, frascos PET transparentes mayoreo, envases para productos de limpieza, botellas plástico 1 litro mayoreo, tapas y envases PET, cotización envases PET, distribuidor envases plástico México, comprar frascos PET mayoreo, envases para alimentos y bebidas México, packaging PET México, Envases La Merced"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- ════════════════════════════════════════
+         MOBILE & PWA
+    ════════════════════════════════════════ -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Envases La Merced" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
+
+    <!-- ════════════════════════════════════════
+         FAVICON (múltiples formatos para compatibilidad)
+         Genéralos en: realfavicongenerator.net
+    ════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ════════════════════════════════════════
+         OPEN GRAPH — Optimizado para WhatsApp
+         WhatsApp requiere:
+         • og:image mínimo 300x200px (ideal 1200x630)
+         • og:image con URL absoluta (no relativa)
+         • og:description breve y persuasivo (< 100 chars funciona mejor en preview)
+         • og:type = website
+    ════════════════════════════════════════ -->
+    <meta property="og:site_name" content="Envases La Merced" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://envaseslamerced.mx/" />
+    <meta
+      property="og:title"
+      content="Envases PET al Mayoreo en México — Envases La Merced"
+    />
+    <!--
+      OG:DESCRIPTION para WhatsApp: más corto que el meta description.
+      WhatsApp muestra aprox. 100-120 chars antes de cortar.
+    -->
+    <meta
+      property="og:description"
+      content="🏭 Botellas, frascos y tapas PET para alimentos, cosméticos y limpieza. Precios de mayoreo · Envío a todo México · Cotiza sin compromiso."
+    />
+    <meta property="og:image" content="https://envaseslamerced.mx/bg2.webp" />
+    <meta
+      property="og:image:secure_url"
+      content="https://envaseslamerced.mx/bg2.webp"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta
+      property="og:image:alt"
+      content="Catálogo de envases y botellas PET al mayoreo — Envases La Merced México"
+    />
+    <meta property="og:locale" content="es_MX" />
+
+    <!-- ════════════════════════════════════════
+         TWITTER CARDS
+    ════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Envases PET al Mayoreo en México — Envases La Merced"
+    />
+    <meta
+      name="twitter:description"
+      content="Botellas, frascos y tapas PET para alimentos, cosméticos y limpieza. Precios de mayoreo. Cotiza sin compromiso."
+    />
+    <meta name="twitter:image" content="https://envaseslamerced.mx/bg2.webp" />
+    <meta
+      name="twitter:image:alt"
+      content="Envases y botellas PET al mayoreo — Envases La Merced"
+    />
+
+    <!-- ════════════════════════════════════════
+         ITEMPROP / MICRODATA
+    ════════════════════════════════════════ -->
+    <meta itemprop="name" content="Envases La Merced" />
+    <meta
+      itemprop="description"
+      content="Distribuidor de envases PET al mayoreo en México. Botellas, frascos y tapas para alimentos, cosméticos y limpieza."
+    />
+    <meta itemprop="image" content="https://envaseslamerced.mx/bg2.webp" />
+
+    <!-- ════════════════════════════════════════
+         JSON-LD SCHEMA — LocalBusiness
+         Ayuda a Google a mostrarte en Maps, Knowledge Panel
+         y búsquedas locales "envases PET cerca de mí"
+    ════════════════════════════════════════ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Envases La Merced",
+        "url": "https://envaseslamerced.mx/",
+        "logo": "https://envaseslamerced.mx/logo_dark_mode.png",
+        "image": "https://envaseslamerced.mx/1000156628.jpeg",
+        "description": "Distribuidor de envases PET al mayoreo en México. Botellas, frascos y tapas para alimentos, cosméticos y limpieza. Precios competitivos y envío a todo México.",
+        "priceRange": "$$",
+        "currenciesAccepted": "MXN",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "areaServed": {
+          "@type": "Country",
+          "name": "México"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "MX"
+        },
+        "sameAs": []
+      }
+    </script>
+
+    <!-- ════════════════════════════════════════
+         VERIFICACIONES DE MOTORES DE BÚSQUEDA
+         (reemplaza con tus códigos reales)
+    ════════════════════════════════════════ -->
+    <meta
+      name="google-site-verification"
+      content="g07mTuT-0s6Z8PU3SjFGC5F5bhqo6HnTwzd9Mn5MKL8"
+    />
+
+    <!-- ════════════════════════════════════════
+         CANONICAL — Evita contenido duplicado
+    ════════════════════════════════════════ -->
+    <link rel="canonical" href="https://envaseslamerced.mx/" />
+
+    <!-- ════════════════════════════════════════
+         FUENTES Y ESTILOS
+    ════════════════════════════════════════ -->
     <link href="/src/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
       rel="stylesheet"
     />
-
-    <title>Envases La Merced — Envases PET y soluciones de envasado</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W4JS5W3L"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

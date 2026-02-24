@@ -10,9 +10,9 @@ export default function CartHeader() {
   return (
     <header className="flex items-start justify-between gap-4 p-4 border-b">
       <div>
-        <h1 className="text-2xl sm:text-3xl font-extrabold">
+        <h2 className="text-2xl sm:text-3xl font-extrabold">
           Carrito de Cotización
-        </h1>
+        </h2>
         <p className="mt-2 text-sm text-text-light-body max-w-md">
           Revise los productos seleccionados antes de solicitar su cotización.
         </p>

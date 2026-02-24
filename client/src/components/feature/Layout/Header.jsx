@@ -55,12 +55,12 @@ export default function Header() {
                 />
               </div>
 
-              <h1 className="text-xl font-bold hidden sm:block">
+              <p className="text-xl font-bold hidden sm:block">
                 <span className="text-txtligth-primary dark:text-txtdark-primary">
                   Envases{" "}
                 </span>
                 <span className="text-brand-accent">La Merced</span>
-              </h1>
+              </p>
             </Link>
           </div>
 

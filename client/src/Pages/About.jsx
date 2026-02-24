@@ -14,7 +14,10 @@ export default function About() {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero
-          srcImg={"/bg_about.jpg"}
+          srcImg={{
+            desktop: "/bg_about.webp",
+            mobile: "/bg_about-mobile.webp",
+          }}
           title="Forjando el Futuro del Embalaje"
           description="Desde nuestra fundación, hemos estado comprometidos con la calidad y la innovación en cada envase que fabricamos y distribuimos."
           type="secondary"

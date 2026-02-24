@@ -8,6 +8,7 @@ export default function Hero({
   showButton = true,
   buttonText = "Solicitar Cotización",
   onButtonClick,
+  alt = "imagen de fondo del hero",
 }) {
   const heroTypes = {
     primary: "min-h-[calc(100vh-5rem)]",
@@ -18,13 +19,17 @@ export default function Hero({
   return (
     <section className={`relative overflow-hidden ${heroTypes[type]}`}>
       {/* Imagen de fondo */}
-      <img
-        src={srcImg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
-        decoding="async"
-      />
+      <picture>
+        <source srcSet={srcImg.mobile} media="(max-width: 768px)" />
+        <source srcSet={srcImg.desktop} media="(min-width: 769px)" />
+        <img
+          src={srcImg}
+          alt={alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          decoding="async"
+        />
+      </picture>
 
       {/* Overlay */}
       <div

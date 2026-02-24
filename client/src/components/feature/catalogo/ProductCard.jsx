@@ -4,8 +4,8 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 
 export default function ProductCard({ product, onQuote }) {
   const etiquetaStyles = {
-    [EtiquetaProducto.STOCK]: "bg-emerald-500/90 text-white",
-    [EtiquetaProducto.PEDIDO]: "bg-amber-500/90 text-white",
+    [EtiquetaProducto.STOCK]: "bg-emerald-800/90 text-white",
+    [EtiquetaProducto.PEDIDO]: "bg-amber-700/90 text-white",
     [EtiquetaProducto.MULTICOLOR]:
       "bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 text-white",
     [EtiquetaProducto.PERSONALIZADO]:
@@ -15,7 +15,7 @@ export default function ProductCard({ product, onQuote }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10 bg-white dark:bg-bgdark-secondary shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       {/* Imagen */}
-      <div className="relative h-52 bg-slate-50 flex items-center justify-center">
+      <div className="relative h-52 bg-slate-50 flex items-center justify-center ">
         <img
           src={product.img.src ?? "/images/placeholder-product.webp"}
           alt={`${product.nombre} ${product.volumen}ml ${product.color}`}
