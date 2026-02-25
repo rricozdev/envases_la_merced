@@ -8,7 +8,7 @@ const heroData = {
   title: "Fabricamos y distribuimos envases de alta calidad para tu negocio",
   description:
     "Soluciones de envasado confiables y a la medida para potenciar su producto en el mercado.",
-  srcImg: { desktop: "/bg2.webp", mobile: "/bg-mobile.webp" },
+  srcImg: { desktop: "/bg2.webp", mobile: "/bg2-mobile.webp" },
   alt: "Imagen de envases de alta calidad para negocios",
 };
 
