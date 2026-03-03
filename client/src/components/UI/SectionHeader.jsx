@@ -10,9 +10,9 @@ export default function SectionHeader({
         centered ? "text-center items-center" : ""
       } ${className}`}
     >
-      <h2 className="text-txtligth-primary dark:text-txtdark-primary tracking-light text-3xl font-bold leading-tight sm:text-4xl max-w-2xl">
+      <h1 className="text-txtligth-primary dark:text-txtdark-primary tracking-light text-3xl font-bold leading-tight sm:text-4xl max-w-2xl">
         {title}
-      </h2>
+      </h1>
       {description && (
         <p className="text-txtligth-secondary dark:text-txtdark-secondary text-base font-normal leading-relaxed max-w-3xl">
           {description}

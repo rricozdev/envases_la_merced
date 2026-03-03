@@ -31,9 +31,15 @@ export default function Button({
   };
 
   const sizes = {
-    sm: iconOnly ? "h-10 w-10 text-sm" : "h-10 px-4 text-sm",
-    md: iconOnly ? "h-14 w-14 text-lg" : "h-14 px-8 text-lg",
-    lg: iconOnly ? "h-16 w-16 text-xl" : "h-16 px-10 text-xl",
+    sm: iconOnly
+      ? "h-8 w-8 sm:h-9 sm:w-9 text-xs sm:text-sm"
+      : "h-8 px-3 text-xs sm:h-9 sm:px-4 sm:text-sm",
+    md: iconOnly
+      ? "h-9 w-9 sm:h-11 sm:w-11 text-sm sm:text-base"
+      : "h-9 px-4 text-sm sm:h-11 sm:px-6 sm:text-base",
+    lg: iconOnly
+      ? "h-11 w-11 sm:h-13 sm:w-13 text-base sm:text-lg"
+      : "h-11 px-5 text-base sm:h-13 sm:px-8 sm:text-lg",
   };
 
   const shapes = {
@@ -45,14 +51,14 @@ export default function Button({
   const baseStyles =
     "flex items-center justify-center gap-2 cursor-pointer overflow-hidden font-bold transition-all active:scale-95";
 
-  // Lógica de ancho
   let widthClass = "";
   if (fullWidth) {
     widthClass = "w-full";
   } else if (iconOnly) {
-    widthClass = ""; // El ancho ya está definido en sizes
+    widthClass = "";
   } else {
-    widthClass = "min-w-[84px] max-w-[480px] mx-auto";
+    widthClass =
+      "w-full sm:w-auto sm:min-w-[120px] sm:max-w-[480px] sm:mx-auto";
   }
 
   const disabledStyles = disabled
