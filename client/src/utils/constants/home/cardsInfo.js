@@ -2,50 +2,57 @@ import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import SavingsRoundedIcon from "@mui/icons-material/SavingsRounded";
 
 const cardsInfo = [
   {
     id: 1,
     size: "sm",
     color: "primary",
-    title: "Venta",
+    title: "Amplia variedad",
     description:
-      "Ofrecemos una amplia gama de envases y complementos, diseñados para satisfacer tus necesidades.",
+      "Amplia variedad de modelos de envases PET listos para entrega inmediata. Sin esperas, sin sustituciones.",
+    detail: "✔ Stock disponible hoy",
     icon: ShoppingBagIcon,
   },
   {
     id: 2,
     size: "sm",
     color: "primary",
-    title: "Producción",
-    description: "Fabricamos envases con los más altos estándares de calidad.",
+    title: "Fabricación propia",
+    description:
+      "Somos fabricantes directos. Cada envase pasa por control de calidad riguroso antes de llegar a ti.",
+    detail: "✔ Sin intermediarios",
     icon: PrecisionManufacturingIcon,
   },
   {
     id: 5,
     size: "sm",
     color: "accent",
-    title: "Precio",
-    description: "El mejor precio garantizado, compruebalo por ti mismo.",
-    icon: AutoGraphIcon,
+    title: "Precio justo",
+    description:
+      "Nuestros precios hablan solos, compruébalo tú mismo con una cotización sin compromiso.",
+    detail: "✔ Transparente y competitivo",
+    icon: SavingsRoundedIcon,
   },
   {
     id: 3,
     size: "sm",
     color: "primary",
-    title: "Distribución",
+    title: "Distribución nacional",
     description:
-      "Contamos con varias ubicaciones y una red logística eficiente para entregar nuestros productos para tu mayor comodidad.",
+      "5 sucursales estratégicas en todo México para entregarte rápido y sin complicaciones.",
+    detail: "✔ Cobertura nacional",
     icon: LocalShippingIcon,
   },
   {
     id: 4,
     size: "sm",
     color: "primary",
-    title: "Linea de productos.",
+    title: "Para cada industria",
     description:
-      "Agua, limpieza, cosmeticos, farmaceuticos, Alimentos, amenidades hoteleras, Vitroleros, Promocionales",
+      "Agua, limpieza, cosméticos, farmacéuticos, alimentos, hotelería y más. Si tu producto necesita un envase lo tenemos",
+    detail: "✔ +8 industrias atendidas",
     icon: ChecklistRoundedIcon,
   },
 ];
