@@ -7,6 +7,8 @@ export default function Hero({
   type = "primary",
   showButton = true,
   buttonText = "Solicitar Cotización",
+  buttonTextSecond = "Ver Productos",
+  onButtonClickSecond,
   onButtonClick,
   alt = "imagen de fondo del hero",
 }) {
@@ -34,8 +36,8 @@ export default function Hero({
       {/* Overlay */}
       <div
         className={`absolute inset-0 bg-linear-to-b 
-          from-[rgba(30,58,95,0.5)] 
-          to-[rgba(30,58,95,0.7)] 
+          from-[rgba(23,44,72,0.6)] 
+          to-[rgba(26,46,74,0.7)] 
           dark:from-[rgba(0,0,0,0.4)] 
           dark:to-[rgba(0,0,0,0.7)]
           ${type === "secondary" ? "rounded-2xl" : ""}
@@ -55,8 +57,8 @@ export default function Hero({
             className={`text-white font-black leading-tight tracking-tight 
               ${
                 type === "primary"
-                  ? "text-4xl sm:text-5xl lg:text-6xl"
-                  : "text-3xl sm:text-4xl lg:text-5xl"
+                  ? "text-3xl sm:text-4xl lg:text-5xl"
+                  : "text-2xl sm:text-3xl lg:text-4xl"
               }`}
           >
             {title}
@@ -64,7 +66,7 @@ export default function Hero({
 
           {description && (
             <p
-              className={`mt-6 mx-auto text-gray-200 
+              className={`mt-6 mx-auto text-gray-100
                 ${
                   type === "primary"
                     ? "max-w-2xl text-lg sm:text-xl"
@@ -76,15 +78,26 @@ export default function Hero({
           )}
 
           {showButton && (
-            <Button
-              className="mt-8"
-              type="primary"
-              variant="solid"
-              size="lg"
-              onClick={onButtonClick}
-            >
-              {buttonText}
-            </Button>
+            <div className="flex gap-2 row-auto flex-nowrap">
+              <Button
+                className="mt-8"
+                type="primary"
+                variant="solid"
+                size="lg"
+                onClick={onButtonClick}
+              >
+                {buttonText}
+              </Button>
+              <Button
+                className="mt-8 text-white border-white hover:border-brand-primary hover:bg-brand-primary "
+                type="secondary"
+                variant="outline"
+                size="lg"
+                onClick={onButtonClickSecond}
+              >
+                {buttonTextSecond}
+              </Button>
+            </div>
           )}
         </div>
       </div>

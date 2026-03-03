@@ -5,26 +5,48 @@ export default function CTASection({
   description,
   buttonText = "Solicitar Cotización",
   onButtonClick,
-  variant = "primary", 
+  variant = "primary",
   className = "",
 }) {
   const variants = {
-    primary: "bg-brand-primary ",
+    primary: "bg-brand-primary",
     accent: "bg-brand-accent",
   };
 
   return (
     <section
-      className={` ${variants[variant]} rounded-xl text-center py-12 px-6 sm:py-16 sm:px-8 ${className}`}
+      aria-labelledby="cta-title"
+      className={`
+        ${variants[variant]}
+        mx-auto
+        my-12
+        w-full
+        max-w-6xl
+        rounded-xl
+        text-center
+        px-6 py-12
+        sm:px-10 sm:py-16
+        lg:px-12
+        ${className}
+      `}
     >
-      <h2 className="text-white text-3xl font-bold  mb-3">{title}</h2>
-      <p className="text-white/80 max-w-2xl mx-auto mb-8">{description}</p>
-      <Button
-        type={variant === "primary" ? "primary" : "secondary"}
-        onClick={onButtonClick}
-      >
-        {buttonText}
-      </Button>
+      <div className="mx-auto max-w-2xl">
+        <h2
+          id="cta-title"
+          className="text-2xl sm:text-3xl font-bold text-white mb-4"
+        >
+          {title}
+        </h2>
+
+        <p className="text-white/80 text-base sm:text-lg mb-8">{description}</p>
+
+        <Button
+          type={variant === "primary" ? "primary" : "secondary"}
+          onClick={onButtonClick}
+        >
+          {buttonText}
+        </Button>
+      </div>
     </section>
   );
 }
