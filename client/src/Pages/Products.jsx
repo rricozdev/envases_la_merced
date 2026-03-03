@@ -111,7 +111,7 @@ export default function Products() {
       <section className="bg-bgligth-tertiary dark:bg-bgdark-tertiary py-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            title="Nuestro Catálogo de Productos"
+            title="Nuestro Catálogo de Envases PET"
             description="Encuentre el envase perfecto para sus necesidades."
           />
         </div>
