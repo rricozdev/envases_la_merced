@@ -8,7 +8,6 @@ import ValueCard from "../components/feature/about/ValueCard";
 import { openWhatsApp } from "../feature/chat/whatsappAction";
 import cardValues from "../utils/constants/about/cardValues";
 import { BRANCH_PHONES } from "../utils/constants/branchPhones";
-ex;
 
 const aboutData = {
   hero: {
