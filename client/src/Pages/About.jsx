@@ -2,6 +2,7 @@ import CTASection from "../components/UI/CTASection";
 import ContentBox from "../components/UI/ContentBox";
 import Hero from "../components/UI/Hero";
 import ImageTextSection from "../components/UI/ImageTextSection";
+ex;
 import SectionHeader from "../components/UI/SectionHeader";
 import ValueCard from "../components/feature/about/ValueCard";
 import { openWhatsApp } from "../feature/chat/whatsappAction";
@@ -181,9 +182,32 @@ export default function About() {
           </div>
         </div>
       </ContentBox>
+      <div className="pb-20 sm:pb-24">
+        <SectionHeader
+          title="Nuestros Valores Fundamentales"
+          description="Estos principios guían cada una de nuestras decisiones y acciones, asegurando que siempre actuemos con integridad y en el mejor interés de nuestros clientes."
+          className="mb-12"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {cardValues.map((value, index) => (
+            <ValueCard
+              key={index}
+              icon={value.icon}
+              title={value.title}
+              description={value.description}
+            />
+          ))}
+        </div>
+      </div>
       <CTASection
         title="¿Listo para encontrar el envase perfecto para tu negocio?"
         description="Contáctanos hoy mismo y descubre cómo podemos ayudarte a impulsar tu negocio con nuestras soluciones en envases PET."
+        onButtonClick={() =>
+          openWhatsApp({
+            phone: BRANCH_PHONES.CDMX.whatsapp,
+            message: "Estoy interesado en sus productos.",
+          })
+        }
       />
     </div>
   );
