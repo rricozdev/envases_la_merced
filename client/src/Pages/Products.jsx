@@ -5,6 +5,7 @@ import Pagination from "../components/UI/Pagination";
 import SectionHeader from "../components/UI/SectionHeader";
 import { CartContext } from "../Providers/CartProvider";
 import { CatalogoProductos } from "../utils/constants/products/listProducts";
+import { Helmet } from "react-helmet-async";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -108,6 +109,16 @@ export default function Products() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Catálogo de Botellas y Frascos PET al Mayoreo | Envases La Merced
+        </title>
+        <meta
+          name="description"
+          content="Explora nuestro catálogo de botellas, frascos y tapas PET para alimentos, cosméticos y limpieza. Venta al mayoreo con envío a toda la República Mexicana."
+        />
+        <link rel="canonical" href="https://envaseslamerced.mx/catalogo" />
+      </Helmet>
       <section className="bg-bgligth-tertiary dark:bg-bgdark-tertiary py-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader

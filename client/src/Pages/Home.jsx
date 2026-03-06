@@ -6,6 +6,7 @@ import { openWhatsApp } from "../feature/chat/whatsappAction";
 import { BRANCH_PHONES } from "../utils/constants/branchPhones";
 import CTASection from "../components/UI/CTASection";
 import ImageTextSection from "../components/UI/ImageTextSection";
+import { Helmet } from "react-helmet-async";
 
 const heroData = {
   title:
@@ -23,6 +24,16 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <>
+      <Helmet>
+        <title>
+          Envases PET al Mayoreo en México — Cotiza Hoy | Envases La Merced
+        </title>
+        <meta
+          name="description"
+          content="Distribuidor de envases PET al mayoreo en México. Botellas, frascos y tapas para alimentos, cosméticos y limpieza. ¡Solicita tu cotización hoy!"
+        />
+        <link rel="canonical" href="https://envaseslamerced.mx/" />
+      </Helmet>
       <Hero
         onButtonClick={() =>
           openWhatsApp({
